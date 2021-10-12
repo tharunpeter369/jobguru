@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload=counter;
+function counter()
+{
+minutes=00
+seconds =10;
+countDown();
+}
+</script>
+<script type="text/javascript">
+function countDown(){
+document.getElementById("min").innerHTML= minutes;
+document.getElementById("remain").innerHTML= seconds;
+setTimeout("countDown()",1000);
+	if(minutes == 0 && seconds == 0)
+		{ 
+		   
+			document.fform.submit();
+      document.write("form submitted"); 
+	  document.getElementById("fform").submit();
+	    {{!-- window.location = "/"; --}}
+		}
+	else	
+		{
+		seconds--;	
+		if(seconds ==0 && minutes > 0)
+		{
+			minutes--;
+			seconds=60;
+		}
+		}
+}
+</script>
+</head>
+<body>
+    <b>You have:</b>
+		<span id="min" ></span> <b>Minutes</b>
+		<span id="remain"></span> <b>Seconds</b>
+
+
+        <form action="/admin/any" method="post" name="fform" id="fform">
+            <input type="text" name="hii" id="hii">
+        </form>
+</body>
+</html>

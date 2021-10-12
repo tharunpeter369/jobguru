@@ -1,0 +1,385 @@
+
+
+
+      
+   
+      
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+      
+      <!-- Breadcromb Area Start -->
+     
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Dashboard</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">candidates</a></li>
+                           <li class="active-breadcromb"><a href="#">Manage Jobs</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End -->
+       
+       
+      {{!-- <!-- Candidate Dashboard Area Start -->
+      <section class="candidate-dashboard-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-md-4 mx-auto dashboard-left-border">
+                  <div class="dashboard-left">
+                     <ul class="dashboard-menu">
+                        <li>
+                           <a href="candidate-dashboard.html">
+                           <i class="fa fa-tachometer"></i>
+                           Dashboard
+                           </a>
+                        </li>
+                        <li><a href="candidate-profile.html"><i class="fa fa-users"></i>My Profile</a></li>
+                        <li><a href="message.html"><i class="fa fa-envelope-open"></i>messages</a></li>
+                        <li class="active">
+                           <a href="manage-jobs.html">
+                           <i class="fa fa-briefcase"></i>
+                           manage jobs
+                           </a>
+                        </li>
+                        <li><a href="candidate-earnings.html"><i class="fa fa-rocket"></i>earnings</a></li>
+                        <li><a href="change-password.html"><i class="fa fa-lock"></i>change password</a></li>
+                        <li><a href="#"><i class="fa fa-power-off"></i>LogOut</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-md-8 mx-auto">
+                  <div class="dashboard-right ">
+                     <div class="manage-jobs">
+                        <div class="manage-jobs-heading">
+                           <h3>My Job Listing</h3>
+                        </div>
+                        <div class="single-manage-jobs table-responsive">
+                           <table class="table">
+                              <thead>
+                                 <tr>
+                                    <th>Title</th>
+                                    <th>Posted on </th>
+                                    <th>Expiring on </th>
+                                    <th>Status</th>
+                                    <th>action</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Frontend React Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Full Stack PHP Developer </a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="expired">Expired</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Node.js Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Frontend React Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Full Stack PHP Developer </a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="expired">Expired</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Node.js Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Frontend React Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Full Stack PHP Developer </a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="expired">Expired</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="manage-jobs-title"><a href="#">Node.js Developer</a></td>
+                                    <td class="table-date">28 June, 2018</td>
+                                    <td class="table-date">10 July, 2018</td>
+                                    <td><span class="pending">Pending Approval</span></td>
+                                    <td class="action">
+                                       <a href="#" class="action-edit"><i class="fa fa-pencil-square-o"></i></a>
+                                       <a href="#" class="action-delete"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <div class="pagination-box-row">
+                              <p>Page 1 of 6</p>
+                              <ul class="pagination">
+                                 <li class="active"><a href="#">1</a></li>
+                                 <li><a href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li>...</li>
+                                 <li><a href="#">6</a></li>
+                                 <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Candidate Dashboard Area End -->
+        --}}
+
+
+
+
+              <!-- Candidate Dashboard Area Start -->
+      <section class="candidate-dashboard-area section_70">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-md-4 col-lg-3 dashboard-left-border">
+                  <div class="dashboard-left">
+
+
+                     <ul class="dashboard-menu">
+                        <li>
+                           <a href="/employer/home">
+                           <i class="fa fa-tachometer"></i>
+                           Dashboard
+                           </a>
+                        </li>
+                        <li ><a href="/employer/profile"><i class="fa fa-users"></i>Company Profile</a></li>
+                        {{!-- <li><a href="message.html"><i class="fa fa-envelope-open"></i>messages</a></li> --}}
+                        <li ><a href="/employer/postjob"><i class="fa fa-envelope-open"></i>post a jobs</a></li>
+                        <li class="active"><a href="/employer/managejob"><i class="fa fa-briefcase"></i>manage job</a></li>
+                        {{!-- <li><a href="transaction.html"><i class="fa fa-rocket"></i>transaction</a></li>
+                        <li><a href="change-password.html"><i class="fa fa-lock"></i>change password</a></li> --}}
+                        <li><a href="#"><i class="fa fa-power-off"></i>LogOut</a></li>
+                     </ul>
+
+
+                  </div>
+               </div>
+
+
+               <div class="col-lg-9 col-md-8 mx-auto">
+                  <div class="dashboard-right ">
+                     <div class="manage-jobs">
+                        <div class="manage-jobs-heading">
+                           <h3>My Job Listing</h3>
+                        </div>
+                        <div class="single-manage-jobs table-responsive">
+
+                           <table id="table1">
+                                 <thead>
+                                    <tr>
+                                          <th>Title</th>
+                                          <th>Posted on</th>
+                                          {{!-- <th>Category</th> --}}
+                                          <th>No applicant</th>
+                                          <th>show applied</th>
+                                          <th>shortlist</th>
+                                          <th>Edit</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    {{#each listedjob}}
+                                    <tr>
+                                          <td> <a href="/employer">{{this.jobTitle}}</a></td>
+                                          <td>{{this.date}}</td>
+                                          {{!-- <td>{{this.category}}</td> --}}
+                                          {{#if this.applied_users.length}}
+                                          <td>{{this.applied_users.length}}</td>
+                                          {{else}}
+                                           <td>0</td>
+                                          {{/if}}
+                           
+                                          {{!-- <td><button class="jobguru-btn-2" id="button_1" value="{{this._id}}" onclick="window.location.href='/employer/appliedcandidate?jobid={{this._id}}'">show profiles</button></td> --}}
+                                          {{!-- <td>Doctor</td> --}}
+                                          {{!-- <td><button class="jobguru-btn-2" id="button_2" value="{{this._id}}" onclick="window.location.href='/employer/shortlisted?jobid={{this._id}}'">short listed</button></td> --}}
+
+
+                                          <td><button class="jobguru-btn-2" id="button_1" value="{{this._id}}" >show profiles</button></td>
+                                          {{!-- <td>Doctor</td> --}}
+                                          <td><button class="jobguru-btn-2" id="button_2" value="{{this._id}}" >short listed</button></td>
+
+                                        <td><button class="jobguru-btn-2" id="button_3"  onclick="window.location.href='/employer/editjob?jobid={{this._id}}'">Edit job</td>
+
+                                          
+
+
+                                    </tr>
+                                    {{/each}}
+                                    <!-- <tr>
+                                          <td>Mohan</td>
+                                          <td>32</td>
+                                          <td>Male</td>
+                                          <td>Teacher</td>
+                                    </tr> -->
+
+                                 </tbody>
+                              </table>
+
+                           {{!-- <div class="pagination-box-row">
+                              <p>Page 1 of 6</p>
+                              <ul class="pagination">
+                                 <li class="active"><a href="#">1</a></li>
+                                 <li><a href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li>...</li>
+                                 <li><a href="#">6</a></li>
+                                 <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                              </ul>
+                           </div> --}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Candidate Dashboard Area End -->
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+  
+<script>
+    $(document).ready(function () {
+        $('#table1').DataTable();
+    });
+</script>
+
+
+
+<script>
+
+
+
+$(document).on('click', '#button_1', function(e){
+   e.preventDefault();
+//your code goes here
+    $.ajax({type: "POST",
+        url: '/employer/appliedcandidate',
+        data: { jobid: $(this).val()},
+        success:function(result) {
+           console.log(result)
+               if(result.applieduserdetails==true){
+              console.log('hello')
+              window.location.href = `/employer/appliedcandidatetrue?jobid=${result.jobid}`;
+           }else{
+              Swal.fire('Oops...', 'No data found!',)
+           }
+          {{!-- alert('ok'); --}}
+        },
+        error:function(result) {
+        }
+    });
+});
+
+$(document).on('click', '#button_2', function(e){
+   e.preventDefault();
+//your code goes here
+    $.ajax({type: "POST",
+        url: '/employer/shortlisted',
+        data: { jobid: $(this).val()},
+        success:function(result) {
+           console.log(result)
+               if(result.shortlist==true){
+              console.log('hello')
+              window.location.href = "/employer/shortlistedredirect";
+           }else{
+              Swal.fire('Oops...', 'No data found!',)
+           }
+          {{!-- alert('ok'); --}}
+        },
+        error:function(result) {
+        }
+    });
+});
+
+
+
+
+
+
+</script>
+
+
+       
+       
+                    {{!-- <input type="text" style="" id="jobid" value="{{this._id}}"> --}}

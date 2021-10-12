@@ -1,0 +1,222 @@
+
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+    type="text/css"
+  />
+
+      <!-- Single Candidate Start -->
+      <section class="single-candidate-page section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-6">
+                  <div class="single-candidate-box">
+                     <div class="single-candidate-img">
+                          <img src="/employprofile/{{jobdetail.employer_id}}.png" alt="single candidate"/>
+                     </div>
+                     <div class="single-candidate-box-right">
+                             <h4>{{jobdetail.jobTitle}}</h4>
+                        {{!-- <img src="assets/img/pl.svg" alt="region" /> --}}
+                        <p>{{jobdetail.companyname}}</p>
+                        <div class="job-details-meta">
+                           {{!-- <p><i class="fa fa-file-text"></i> Applications 1</p> --}}
+                           <p id="datesting"><i class="fa fa-calendar"></i>{{formatDate jobdetail.date}}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-6">
+                  <div class="single-candidate-action">
+                     {{!-- <a href="/bookmark" class="candidate-contact"><i class="fa fa-star"></i>Bookmarks</a> --}}
+                      {{!-- <a href="/companyprofile" class="candidate-contact"><i class="fa fa-star"></i>company profile</a> --}}
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Single Candidate End -->
+       
+       
+      <!-- Single Candidate Bottom Start -->
+      <section class="single-candidate-bottom-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-lg-9 mx-auto">
+                  <div class="single-candidate-bottom-left">
+                     <div class="single-candidate-widget">
+                        <h3>job Description</h3>
+                        <p>{{jobdetail.jobDescription}}</p>
+                     </div>
+                     <div class="single-candidate-widget job-required">
+                        <h3>Skills, and Abilities</h3>
+                        <ul class="company-desc-list">
+                           {{#each jobdetail.skill}}
+                           <li><i class="fa fa-check"></i>{{this}}</li>
+                           {{/each}}
+                           {{!-- <li><i class="fa fa-check"></i>Proficient in Photoshop, Illustrator, bonus points for familiarity with Sketch (Sketch is our preferred concepting)</li>
+                           <li><i class="fa fa-check"></i>Cross-browser and platform testing as standard practice</li>
+                           <li><i class="fa fa-check"></i>Experience using Invision a plus</li>
+                           <li><i class="fa fa-check"></i>Experience in video production a plus or, at a minimum, a willingness to learn</li> --}}
+                        </ul>
+                     </div>
+                     {{!-- <div class="single-candidate-widget clearfix">
+                        <h3>Challenges & Benifits</h3>
+                        <p>Etiam quis interdum felis, at pellentesque metus. Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur tellus eget odio aliquet, vel vestibulum tellus sollicitudin. Morbi maximus metus eu eros tincidunt, vitae mollis ante imperdiet. Nulla imperdiet at mauris ut posuere.</p>
+                        <p>Donec accumsan auctor iaculis. Nullam non tortor massa. Proin ligula leo, hendrerit quis tincidunt a, sodales eget ligula. Aenean et est tristique, dictum lorem vel, porttitor urna.</p>
+                        <p>Suspendisse gravida elementum lacus, a malesuada tortor sollicitudin ut. Donec pharetra metus lectus, ut eleifend eros sollicitudin et. Ut at lobortis dolor, eget commodo tortor. Curabitur bibendum consequat neque a tincidunt. In in euismod quam. Proin in egestas eros. Cum sociis </p>
+                     </div> --}}
+                     {{!-- <div class="single-candidate-widget clearfix">
+                        <h3>share this post</h3>
+                        <ul class="share-job">
+                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                           <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                     </div>
+                     <div class="single-candidate-widget">
+                        <h3>Similar Jobs</h3>
+                        <div class="sidebar-list-single">
+                           <div class="top-company-list">
+                              <div class="company-list-logo">
+                                 <a href="#">
+                                 <img src="assets/img/company-logo-2.png" alt="company list 1">
+                                 </a>
+                              </div>
+                              <div class="company-list-details">
+                                 <h3><a href="#">Regional Sales Manager</a></h3>
+                                 <p class="company-state"><i class="fa fa-map-marker"></i> Chicago, Michigan</p>
+                                 <p class="open-icon"><i class="fa fa-clock-o"></i>2 minutes ago</p>
+                                 <p class="varify"><i class="fa fa-check"></i>Fixed price : $1200-$2000</p>
+                                 <p class="rating-company">4.1</p>
+                              </div>
+                              <div class="company-list-btn">
+                                 <a href="#" class="jobguru-btn">bid now</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sidebar-list-single">
+                           <div class="top-company-list">
+                              <div class="company-list-logo">
+                                 <a href="#">
+                                 <img src="assets/img/company-logo-3.png" alt="company list 1">
+                                 </a>
+                              </div>
+                              <div class="company-list-details">
+                                 <h3><a href="#">Asst. Teacher</a></h3>
+                                 <p class="company-state"><i class="fa fa-map-marker"></i> Chicago, Michigan</p>
+                                 <p class="open-icon"><i class="fa fa-clock-o"></i>2 minutes ago</p>
+                                 <p class="varify"><i class="fa fa-check"></i>Fixed price : $800-$1200</p>
+                                 <p class="rating-company">4.2</p>
+                              </div>
+                              <div class="company-list-btn">
+                                 <a href="#" class="jobguru-btn">bid now</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div> --}}
+                  </div>
+               </div>
+               <div class="col-md-10 col-lg-3 mx-auto">
+
+
+                  <div class="single-candidate-bottom-right">
+
+
+                     {{!-- <div class="single-candidate-widget-2">
+                        <a href="/MCQtest?jobid={{jobdetail._id}}" class="jobguru-btn-2">
+                        <i class="fa fa-paper-plane-o"></i>
+                        Test
+                        </a>
+                     </div>
+
+                     {{#if jobdetail.userapplied}}
+                     <div class="single-candidate-widget-2">
+                        <a  class="jobguru-btn-2">
+                        <i class="fa fa-paper-plane-o"></i>
+                        Appllied job
+                        </a>
+                     </div>
+                     {{else}}
+                     <div class="single-candidate-widget-2">
+                        <a href="/applyjob?jobid={{jobdetail._id}}&from=jobdetail" class="jobguru-btn-2">
+                        <i class="fa fa-paper-plane-o"></i>
+                        Apply Now
+                        </a>
+                     </div>
+                     {{/if}} --}}
+
+
+
+
+                     <div class="single-candidate-widget-2">
+                        <h3>Job overview</h3>
+                        <ul class="job-overview">
+                           <li>
+                              <h4><i class="fa fa-briefcase"></i> Offerd Salary</h4>
+                              <p>Rs.{{jobdetail.minSalary}} - Rs.{{jobdetail.maxSalary}}</p>
+                           </li>
+                           <li>
+                              <h4><i class="fa fa-map-marker"></i>Job Location</h4>
+                              <p>{{jobdetail.Location}}</p>
+                           </li>
+                           <li>
+                              <h4><i class="fa fa-thumb-tack"></i> Job Type</h4>
+                              <p>{{jobdetail.jobtype}}</p>
+                           </li>
+                           <li>
+                              <h4><i class="fa fa-clock-o"></i> Date Posted</h4>
+                              <p>{{formatDate jobdetail.date}}</p>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="single-candidate-widget-2">
+                        <h3>Location on map</h3>
+                        <button onclick="mapLoc()" class="btn btn-secondary">Location on map</button>
+
+                            {{!-- <div class="widget jobsearch_widget_map">
+                                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NYs84atYeBuBrKcjafLRor-QCstxuAss" width="100%" height="300px"></iframe>
+
+                              </div> --}}
+
+                     </div>
+
+                       <div id='map'></div>
+
+                  </div>
+
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Single Candidate Bottom End -->
+
+        <script>
+
+    function mapLoc(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+         
+         }
+         function showPosition(position) {
+            window.open(`https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination={{jobdetail.cordinates.lat}},{{jobdetail.cordinates.lng}}`)
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+          }
+        
+    }
+
+ </script>
+
+
+
+
+       
+       

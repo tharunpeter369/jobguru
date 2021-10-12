@@ -1,0 +1,169 @@
+
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			
+			<!-- Title Header Start -->
+			<section class="inner-header-title" style="background-image:url(/user/img/banner-10.jpg);">
+				<div class="container">
+					<h1>Browse Jobs</h1>
+				</div>
+			</section>
+			<div class="clearfix"></div>
+			<!-- Title Header End -->
+			
+			<!-- ========== Begin: Brows job Category ===============  -->
+			<section class="brows-job-category">
+				<div class="container">
+					<!-- Company Searrch Filter Start -->
+					<div class="row extra-mrg">
+						<div class="wrap-search-filter">
+							<form>
+								<div class="col-md-4 col-sm-4">
+									<input type="text" class="form-control" placeholder="Keyword: Name, Tag">
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<input type="text" class="form-control" placeholder="Location: City, State, Zip">
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<select class="selectpicker form-control" multiple title="All Categories">
+									  <option>Information Technology</option>
+									  <option>Mechanical</option>
+									  <option>Hardware</option>
+									</select>
+
+								</div>
+								<div class="col-md-2 col-sm-2">
+									<button type="submit" class="btn btn-primary">Filter</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- Company Searrch Filter End -->
+
+				{{#each aplliedjob}}
+					<div class="item-click">
+						<article>
+							<div class="brows-job-list">
+								<div class="col-md-1 col-sm-2 small-padding">
+									<div class="brows-job-company-img">
+										<a href="job-detail.html"><img src="/employprofile/{{this.employer_id}}.png" class="img-responsive" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-5">
+									<div class="brows-job-position">
+										<a href="/jobInDetails?jobid={{this._id}}"><h3>{{this.jobTitle}}</h3></a>
+										<p>
+											<span>Autodesk</span><span class="brows-job-sallery"><i class="fa fa-money"></i>${{this.minSalary}} - {{this.maxSalary}}</span>
+											<span class="job-type cl-success bg-trans-success">{{this.jobtype}}</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<div class="brows-job-location">
+										<p><i class="fa fa-map-marker"></i>{{this.Location}}</p>
+									</div>
+								</div>
+
+								<div class="col-md-2 col-sm-2" style="display: flex; align-items:center; justify-content:space-between;" >
+									<div class="brows-job-link">
+
+										<a class="btn btn-default" >Appllied</a>
+
+									</div>
+									<div class="brows-job-link">
+
+										<a class="btn btn-default" style="margin-left:10px;" ><i class="fas fa-heart"></i></a>
+		
+									</div>
+								</div>
+
+
+
+							<span class="tg-themetag tg-featuretag">Premium</span>
+						</article>
+					</div>
+				{{/each}}
+
+
+
+					{{#each listedjobs}}
+					<div class="item-click">
+						<article>
+							<div class="brows-job-list">
+								<div class="col-md-1 col-sm-2 small-padding">
+									<div class="brows-job-company-img">
+										<a href="job-detail.html"><img src="/employprofile/{{this.employer_id}}.png" class="img-responsive" alt="" /></a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-5">
+									<div class="brows-job-position">
+										<a href="/jobInDetails?jobid={{this._id}}"><h3>{{this.jobTitle}}</h3></a>
+										<p>
+											<span>Autodesk</span><span class="brows-job-sallery"><i class="fa fa-money"></i>${{this.minSalary}} - {{this.maxSalary}}</span>
+											<span class="job-type cl-success bg-trans-success">{{this.jobtype}}</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<div class="brows-job-location">
+										<p><i class="fa fa-map-marker"></i>{{this.Location}}</p>
+									</div>
+								</div>
+
+
+								
+								<div class="col-md-2 col-sm-2">
+									<div class="brows-job-link">
+
+										{{#if ../logedinuser}}
+										<a href="/applyjob?jobid={{this._id}}" class="btn btn-default" >Apply Now</a>
+										{{else}}
+										 {{!-- <li class="left-br"><a href="javascript:void(0)" data-toggle="modal" data-target="#signup"
+                                	class="signin">Sign In Now</a></li> --}}
+										<a href="javascript:void(0)" data-toggle="modal" data-target="#signup"
+                                		class="signin btn btn-default">Apply Now</a>
+										{{!-- <button onclick="" class="btn btn-default">Apply Now</button> --}}
+										{{/if}}
+											{{!-- <a onclick="" class="btn btn-default" >Apply Now</a> --}}
+									</div>
+
+									<div class="brows-job-link">
+
+										<a class="btn btn-default" style="margin-left:10px;" ><i class="fas fa-heart"></i></a>
+		
+									</div>
+								</div>
+							</div>
+							<span class="tg-themetag tg-featuretag">Premium</span>
+						</article>
+					</div>
+					{{/each}}
+
+
+
+
+					
+					<!--/.row-->
+					<div class="row">
+						<ul class="pagination">
+							<li><a href="#">&laquo;</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li> 
+							<li><a href="#">4</a></li> 
+							<li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li> 
+							<li><a href="#">&raquo;</a></li> 
+						</ul>
+					</div>
+					
+				</div>
+			</section>
+			<!-- ========== Begin: Brows job Category End ===============  -->
+			
+			<!-- Footer Section Start -->
+
+			<script>
+				function checklogin(){
+
+				}
+			</script>

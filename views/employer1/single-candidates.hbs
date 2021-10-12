@@ -1,0 +1,286 @@
+
+       
+      
+      <!-- Single Candidate Start -->
+      <section class="single-candidate-page section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="single-candidate-box">
+                     <div class="single-candidate-img">
+                        <img src="/userprofile/{{userdata.user_id}}.jpg" alt="single candidate" />
+                     </div>
+                     <div class="single-candidate-box-right">
+                        <h4>{{userdata.profilename}}</h4>
+                        {{!-- <img src="/employer1/assets/img/pl.svg" alt="region" /> --}}
+                        <p>{{userdata.jobtitle}}</p>
+                        <div class="single-candidate-rate">
+                           {{!-- <p class="rating-company">4.9</p> --}}
+                           {{!-- <ul>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star-half-o"></i></li>
+                           </ul> --}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="single-candidate-action">
+                      {{!-- <a href="/userresume/{{userdata.user_id}}.pdf" target="_blank" class="bookmarks"><i class="fas fa-user-edit"></i></i>Resume</a>    --}}
+                      {{!-- <a href="/employer/viewpdfresume?userid={{userdata.user_id}}" target="_blank" class="bookmarks"><i class="fas fa-user-edit"></i></i>Resume</a>  --}}
+
+
+                      {{!-- <a href="/employer/resumeview?userid={{userdata.user_id}}" id="button1" target="_blank" class="bookmarks"><i class="fas fa-user-edit"></i></i>View Resume</a>  --}}
+
+                      <a  id="button1" target="_blank"  class="bookmarks"><i class="fas fa-user-edit"></i></i>View Resume</a> 
+
+
+                      <a href="/employer/download-pdf?userid={{userdata.user_id}}"  class="bookmarks"><i class="fas fa-user-edit"></i></i>Download</a> 
+
+                     {{!-- <a href="#" class="bookmarks"><i class="fa fa-star"></i>Bookmarks</a>  --}}
+                     
+                     {{!-- <a href="#" class="candidate-contact"><i class="fa fa-envelope"></i>contact</a> --}}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Single Candidate End -->
+
+       
+       
+      <!-- Single Candidate Bottom Start -->
+      <div class="single-candidate-bottom-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-lg-9 mx-auto">
+                  <div class="single-candidate-bottom-left">
+
+
+                     <div class="single-candidate-widget">
+                        <h3>About Me</h3>
+                        <p>{{userdata.profilebio}}</p>
+                        {{!-- <p>faucibus in malesuada a, dignissim at odio. Aenean eleifend urna.Nulla maximus volutpat dui. Etiam luctus lobortis massa in pulvinar. Maecenas nunc odio, faucibus in malesuada a, dignissim at odio.</p> --}}
+                     </div>
+
+                     <div class="single-candidate-widget">
+                        <h3>Skills</h3>
+                        <ul>
+
+                           {{#each userdata.skill}}
+                           <li><a href="#">{{this}}</a></li>
+                           {{/each}}
+                           {{!-- <li><a href="#">python</a></li>
+                           <li><a href="#">java</a></li>
+                           <li><a href="#">PHP</a></li>
+                           <li><a href="#">wordpress</a></li>
+                           <li><a href="#">Android</a></li>
+                           <li><a href="#">django</a></li> --}}
+                        </ul>
+                     </div>
+
+
+
+
+                     <div class="single-candidate-widget">
+                        <h3>Address</h3>
+                        <p>{{userdata.profileaddress}}</p>
+
+                        {{!-- <p>faucibus in malesuada a, dignissim at odio. Aenean eleifend urna.Nulla maximus volutpat dui. Etiam luctus lobortis massa in pulvinar. Maecenas nunc odio, faucibus in malesuada a, dignissim at odio.</p> --}}
+                     </div>
+
+                     {{#if userdata.qualificaiton}}
+                     <div class="single-candidate-widget">
+                        <h3>Qualification</h3>
+                        <p>{{userdata.qualificaiton}}</p>
+                        <p>{{userdata.qualificaionfromdate}} -- {{userdata.qualificaiontodate}}</p>
+                        {{!-- <p>faucibus in malesuada a, dignissim at odio. Aenean eleifend urna.Nulla maximus volutpat dui. Etiam luctus lobortis massa in pulvinar. Maecenas nunc odio, faucibus in malesuada a, dignissim at odio.</p> --}}
+                     </div>
+                     {{/if}}
+
+
+                     <div class="single-candidate-widget">
+                        <h3>About Me</h3>
+                        <p>{{userdata.profilebio}}</p>
+                        {{!-- <p>faucibus in malesuada a, dignissim at odio. Aenean eleifend urna.Nulla maximus volutpat dui. Etiam luctus lobortis massa in pulvinar. Maecenas nunc odio, faucibus in malesuada a, dignissim at odio.</p> --}}
+                     </div>
+
+
+
+                     
+                     {{!-- <div class="single-candidate-widget clearfix">
+                        <h3>project history</h3>
+                        <div class="progressbar-example">
+                           <div class="progress-box">
+                              <p class="progress-title">Job Success</p>
+                              <p class="progress-size">80%</p>
+                              <div class="progress">
+                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                              </div>
+                           </div>
+                           <div class="progress-box">
+                              <p class="progress-title">Recommendation</p>
+                              <p class="progress-size">100%</p>
+                              <div class="progress">
+                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                              </div>
+                           </div>
+                           <div class="progress-box">
+                              <p class="progress-title">On Budget</p>
+                              <p class="progress-size">70%</p>
+                              <div class="progress">
+                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                              </div>
+                           </div>
+                           <div class="progress-box">
+                              <p class="progress-title">On Budget</p>
+                              <p class="progress-size">90%</p>
+                              <div class="progress">
+                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div> --}}
+
+
+
+                        {{#if userdata.expjobcompany}}
+                     <div class="single-candidate-widget">
+                        <h3>work History</h3>
+                        <div class="single-work-history">
+                           <div class="single-candidate-list">
+                              <div class="main-comment">
+                                 {{!-- <div class="candidate-image">
+                                    <img src="/employer1/assets/img/a_logo.png" alt="author">
+                                 </div> --}}
+                                 <div class="candidate-text">
+                                    <div class="candidate-info">
+                                       <div class="candidate-title">
+                                          <h3><a >{{userdata.expjobcompany}}</a></h3>
+                                       </div>
+                                       <p><i class="fa fa-calendar-check-o"></i>{{userdata.expjobfrom }}- {{userdata.expjobto}}</p>
+                                    </div>
+                                    <div class="candidate-text-inner">
+                                       <p>{{userdata.workexperiancebrief}}</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        {{!-- <div class="single-work-history">
+                           <div class="single-candidate-list">
+                              <div class="main-comment">
+                                 <div class="candidate-image">
+                                    <img src="/employer1/assets/img/b_logo.png" alt="author">
+                                 </div>
+                                 <div class="candidate-text">
+                                    <div class="candidate-info">
+                                       <div class="candidate-title">
+                                          <h3><a href="#">Junior UX/UI Designer</a></h3>
+                                       </div>
+                                       <p><i class="fa fa-calendar-check-o"></i>May 2015 - July 2017</p>
+                                    </div>
+                                    <div class="candidate-text-inner">
+                                       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eu velit cursus, tempor ipsum in, tempus lectus. Nullam tempus nisi id nisl luctus, non tempor justo molestie.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div> --}}
+                     </div>
+                     {{/if}}
+
+
+                  </div>
+               </div>
+               <div class="col-md-10 col-lg-3 mx-auto">
+                  <div class="single-candidate-bottom-right">
+                     {{!-- <div class="single-candidate-widget-2">
+                        <a href="#" class="jobguru-btn-2">
+                        <i class="fa fa-balance-scale"></i>
+                        compare with others
+                        </a>
+                     </div> --}}
+
+                     <div class="single-candidate-widget-2">
+                        <ul>
+                           <li><a href="mailto:{{userdata.profileemail}}"><i class="fa fa-envelope"></i>{{userdata.profileemail}}</a></li>
+                           <li> <a href="tel:{{userdata.profilenumber}}"><i class="fa fa-phone"></i>{{userdata.profilenumber}}</a></li>
+                           <li>
+                              <a href="{{userdata.website}}">
+                              <i class="fa fa-globe"></i>
+                               {{userdata.website}}
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="single-candidate-widget-2">
+                        <h3>Social Links</h3>
+                        <ul class="candidate-social">
+                           <li><a href="{{userdata.facebook}}"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="{{userdata.twitter}}"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="{{userdata.flinkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                           <li><a href="{{userdata.googleplus}}"><i class="fa fa-google-plus"></i></a></li>
+                           <li><a href="{{userdata.instagram}}"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                     </div>
+                     {{!-- <div class="single-candidate-widget-2">
+                        <h3>Quick Contacts</h3>
+                        <form>
+                           <p>
+                              <input type="text" placeholder="Your Name">
+                           </p>
+                           <p>
+                              <input type="email" placeholder="Your Email Address">
+                           </p>
+                           <p>
+                              <textarea placeholder="Write here your message"></textarea>
+                           </p>
+                           <p>
+                              <button type="submit">Send Message</button>
+                           </p>
+                        </form>
+                     </div> --}}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Single Candidate Bottom End -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+
+
+
+
+      <script>
+         $(document).on('click', '#button1', function(e){
+   e.preventDefault();
+//your code goes here
+    $.ajax({type: "POST",
+        url: '/employer/resumeview',
+        {{!-- data: { jobid: $(this).val()}, --}}
+        data: { userid: '{{userdata.user_id}}'},
+        success:function(result) {
+           console.log(result)
+               if(result==true){
+              console.log('hello')
+              window.location.href = "/employer/resumeview";
+           }else{
+              Swal.fire('Sorry...', 'User not updated resume!',)
+           }
+          {{!-- alert('ok'); --}}
+        },
+        error:function(result) {
+        }
+    });
+});
+      </script>
+       
+       
+     

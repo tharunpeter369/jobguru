@@ -1,0 +1,199 @@
+
+      <!-- Single Candidate Start -->
+      <section class="single-candidate-page section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="single-candidate-box">
+                     <div class="single-candidate-img">
+                        <img src="/employprofile/{{employerprofile.employer_id}}.png" alt="single candidate" />
+                     </div>
+                     <div class="single-candidate-box-right">
+                        <h4>{{employerprofile.employerName}}</h4>
+                        {{!-- <img src="/employer1/assets/img/pl.svg" alt="region" /> --}}
+                        <p>{{employerprofile.category}}</p>
+                        {{!-- <div class="single-candidate-rate">
+                           <p class="rating-company">4.9</p>
+                           <ul>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star"></i></li>
+                              <li><i class="fa fa-star-half-o"></i></li>
+                           </ul>
+                        </div> --}}
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="single-candidate-action">
+                     {{!-- <a href="#" class="bookmarks"><i class="fa fa-map-marker"></i>See on map</a> --}}
+                     {{!-- <a href="#" class="candidate-contact"><i class="fa fa-gavel"></i>posted Jobs</a> --}}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Single Candidate End -->
+       
+       
+      <!-- Single Candidate Bottom Start -->
+      <div class="single-candidate-bottom-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-lg-9 mx-auto">
+                  <div class="single-candidate-bottom-left">
+                     <div class="single-candidate-widget">
+                        <h3>company description</h3>
+                    
+                        <p>{{employerprofile.category}}</p>
+
+                        {{!-- <ul class="company-desc-list">
+                           <li><i class="fa fa-check"></i> Sed consectetur tellus eget odio aliquet</li>
+                           <li><i class="fa fa-check"></i> Morbi maximus metus vitae mollis ante imperdiet</li>
+                           <li><i class="fa fa-check"></i> tellus eget vestibulum tellus sollicitudin</li>
+                           <li><i class="fa fa-check"></i> eros consectetur lectus tellus eget odio aliquet</li>
+                           <li><i class="fa fa-check"></i> Morbi maximus metus vitae mollis ante imperdiet</li>
+                           <li><i class="fa fa-check"></i> tellus eget vestibulum tellus sollicitudin</li>
+                        </ul> --}}
+                     </div>
+
+                     <div class="single-candidate-widget">
+                        <h3>Founded</h3>
+                    
+                        <p>{{employerprofile.founded}}</p>
+
+                     </div>
+
+                     <div class="single-candidate-widget">
+                        <h3>No of Employes </h3>
+                    
+                        <p>{{employerprofile.teammembers}}</p>
+
+                     </div>
+                     <div class="single-candidate-widget">
+                        <h3>({{positionlength}}) Open Positions</h3>
+
+                        {{#each findemployerlistedjob}}
+                        <div class="single-work-history company-single-page">
+                           <div class="single-candidate-list">
+                              <div class="main-comment">
+                                 <div class="candidate-text">
+                                    <div class="candidate-info">
+                                       <div class="candidate-title">
+                                          <h3><a href="/jobInDetails?jobid={{this._id}}">{{this.jobTitle}}</a></h3>
+                                       </div>
+                                       <p class="company-state">
+                                          <i class="fa fa-map-marker"></i>
+                                          {{this.Location}}
+                                       </p>
+                                       <p class="open-icon">
+                                          <i class="fa fa-clock-o"></i>
+                                          {{this.jobtype}}
+                                       </p>
+                                       <p class="varify">
+                                          <i class="fa fa-check"></i>
+                                          Salary : Rs.{{this.minSalary}}-Rs.{{this.maxSalary}}
+                                       </p>
+                                    </div>
+                                    <div class="candidate-text-inner">
+                                       <p>{{this.jobDescription}}</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        {{/each}}
+
+                        
+                        {{!-- <div class="single-work-history company-single-page">
+                           <div class="single-candidate-list">
+                              <div class="main-comment">
+                                 <div class="candidate-text">
+                                    <div class="candidate-info">
+                                       <div class="candidate-title">
+                                          <h3><a href="#">C Developer (Senior) C .Net</a></h3>
+                                       </div>
+                                       <p class="company-state">
+                                          <i class="fa fa-map-marker"></i>
+                                          Chicago
+                                       </p>
+                                       <p class="open-icon">
+                                          <i class="fa fa-clock-o"></i>
+                                          Full Time
+                                       </p>
+                                       <p class="varify">
+                                          <i class="fa fa-check"></i>
+                                          Salary : $800-$1200
+                                       </p>
+                                    </div>
+                                    <div class="candidate-text-inner">
+                                       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eu velit cursus, tempor ipsum in, tempus lectus. Nullam tempus nisi id nisl luctus, non tempor justo molestie.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div> --}}
+
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-10 col-lg-3 mx-auto">
+                  <div class="single-candidate-bottom-right">
+
+
+                     {{!-- <div class="single-candidate-widget-2">
+                        <a href="#" class="jobguru-btn-2">
+                        <i class="fa fa-balance-scale"></i>
+                        compare with others
+                        </a>
+                     </div> --}}
+
+
+                     <div class="single-candidate-widget-2">
+                        <ul>
+                           {{!-- <li><i class="fa fa-envelope"></i> {{employerprofile.email}}</li> --}}
+                           <li><a href="mailto:{{employerprofile.email}}"><i class="fa fa-envelope"></i>{{employerprofile.email}}</a></li>
+                           {{!-- <li><i class="fa fa-phone"></i>{{employerprofile.companyphone}}</li> --}}
+                           <li><a href="tel:{{employerprofile.companyphone}}"><i class="fa fa-phone"></i>{{employerprofile.companyphone}}</a></li>
+                           <li><a href="https://{{employerprofile.comapanywebsite}}"><i class="fa fa-globe"></i>{{employerprofile.comapanywebsite}}</a></li>
+                        </ul>
+                     </div>
+                     <div class="single-candidate-widget-2">
+                        <h3>Social Links</h3>
+                        <ul class="candidate-social">
+                           {{#if employerprofile.facebook}}
+                           <li><a href="https://{{employerprofile.facebook}}"><i class="fa fa-facebook"></i></a></li>
+                           {{/if}}
+                            {{#if employerprofile.twitter}}
+                           <li><a href="https://{{employerprofile.twitter}}"><i class="fa fa-twitter"></i></a></li>
+                           {{/if}}
+                           {{#if employerprofile.linkedin}}
+                           <li><a href="https://{{employerprofile.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                           {{/if}}
+                           {{#if employerprofile.google}}
+                           <li><a href="https://{{employerprofile.google}}"><i class="fa fa-google-plus"></i></a></li>
+                           {{/if}}
+                           {{!-- {{#if employerprofile.facebook}}
+                           <li><a href="{{employerprofile.facebook}}"><i class="fa fa-instagram"></i></a></li>
+                           {{/if}} --}}
+                        </ul>
+                     </div>
+
+
+                     {{!-- <div class="single-candidate-widget-2">
+                                  <div class="widget jobsearch_widget_map">
+                                       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NYs84atYeBuBrKcjafLRor-QCstxuAss" width="100%" height="300px"></iframe>
+                                    </div>
+                     </div> --}}
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Single Candidate Bottom End -->
+       
+      

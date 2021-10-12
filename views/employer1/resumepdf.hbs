@@ -1,0 +1,64 @@
+
+
+
+
+       
+       
+      <!-- Breadcromb Area Start -->
+
+      {{!-- <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+
+            </div>
+         </div>
+
+      </section> --}}
+
+      <!-- Breadcromb Area End -->
+       
+       
+      <!-- Login Area Start -->
+      <section class="jobguru-login-area section_70">
+         <div class="container">
+            <div class="row">
+
+                            <div class="container">
+                                <div id="viewpdf" style="height: 600px;">
+
+                                </div>
+                            </div>
+
+            </div>
+         </div>
+      </section>
+      <!-- Login Area End -->
+       
+       
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.js" integrity="sha512-I5DeI8/00iidt2UqCjN6/VXjksWSsSwuEleCimq5QuPmhfbnMWSRrfp4cvS6lESaZXYCNv+0qs2Kor9ItoMORA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+       <script>
+           var viewpdf = $("#viewpdf")
+           PDFObject.embed("/userresume/{{user_id.userid}}.pdf",viewpdf)
+       </script>
+
+
+
+
+     
+
+
+
+
+
+
+

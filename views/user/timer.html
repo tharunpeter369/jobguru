@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload=counter;
+function counter()
+{
+minutes=01
+seconds =60;
+countDown();
+}
+</script>
+<script type="text/javascript">
+function countDown(){
+document.getElementById("min").innerHTML= minutes;
+document.getElementById("remain").innerHTML= seconds;
+setTimeout("countDown()",1000);
+	if(minutes == 0 && seconds == 0)
+		{ 
+		   
+			//document.form.submit();
+      document.write("form submitted"); 
+		}
+	else	
+		{
+		seconds--;	
+		if(seconds ==0 && minutes > 0)
+		{
+			minutes--;
+			seconds=60;
+		}
+		}
+}
+</script>
+</head>
+<body>
+    <b>You have:</b>
+		<span id="min" ></span> <b>Minutes</b>
+		<span id="remain"></span> <b>Seconds</b>
+</body>
+</html>

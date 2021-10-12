@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   
+<!-- Mirrored from themescare.com/demos/jobguru-version-2/employer-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Jul 2021 07:35:07 GMT -->
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="jobguru | Job Board HTML Templates from Themescare">
+      <meta name="keyword" content="Job, freelancer, employee, marketplace">
+      <meta name="author" content="Themescare">
+      <!-- Title -->
+      <title>jobguru</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="/employer1/assets/img/favicon/favicon-32x32.png">
+      <!--Bootstrap css-->
+      <link rel="stylesheet" href="/employer1/assets/css/bootstrap.css">
+      <!--Font Awesome css-->
+      <link rel="stylesheet" href="/employer1/assets/css/font-awesome.min.css">
+      <!--Magnific css-->
+      <link rel="stylesheet" href="/employer1/assets/css/magnific-popup.css">
+      <!--Owl-Carousel css-->
+      <link rel="stylesheet" href="/employer1/assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="/employer1/assets/css/owl.theme.default.min.css">
+      <!--Animate css-->
+      <link rel="stylesheet" href="/employer1/assets/css/animate.min.css">
+      <!--Select2 css-->
+      <link rel="stylesheet" href="/employer1/assets/css/select2.min.css">
+      <!--Slicknav css-->
+      <link rel="stylesheet" href="/employer1/assets/css/slicknav.min.css">
+      <!--Bootstrap-Datepicker css-->
+      <link rel="stylesheet" href="/employer1/assets/css/bootstrap-datepicker.min.css">
+      <!--Jquery UI css-->
+      <link rel="stylesheet" href="/employer1/assets/css/jquery-ui.min.css">
+      <!--Perfect-Scrollbar css-->
+      <link rel="stylesheet" href="/employer1/assets/css/perfect-scrollbar.min.css">
+      <!--Site Main Style css-->
+      <link rel="stylesheet" href="/employer1/assets/css/style.css">
+      <!--Responsive css-->
+      <link rel="stylesheet" href="/employer1/assets/css/responsive.css">
+
+
+       <link rel="stylesheet" href="/cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
+
+
+
+
+
+            <!--Jquery js-->
+      <script src="/employer1/assets/js/jquery-3.6.0.min.js"></script>
+      <!--Bootstrap js-->
+      <script src="/employer1/assets/js/bootstrap.bundle.min.js"></script>
+      <!--Bootstrap Datepicker js-->
+      <script src="/employer1/assets/js/bootstrap-datepicker.min.js"></script>
+      <!--Perfect Scrollbar js-->
+      <script src="/employer1/assets/js/jquery-perfect-scrollbar.min.js"></script>
+      <!--Owl-Carousel js-->
+      <script src="/employer1/assets/js/owl.carousel.min.js"></script>
+      <!--SlickNav js-->
+      <script src="/employer1/assets/js/jquery.slicknav.min.js"></script>
+      <!--Magnific js-->
+      <script src="/employer1/assets/js/jquery.magnific-popup.min.js"></script>
+      <!--Select2 js-->
+      <script src="/employer1/assets/js/select2.min.js"></script>
+      <!--jquery-ui js-->
+      <script src="/employer1/assets/js/jquery-ui.min.js"></script>
+      <!--Custom-Scrollbar js-->
+      <script src="/employer1/assets/js/custom-scrollbar.js"></script>
+      <!--Jarallax js-->
+      <script src="/employer1/assets/js/jarallax.min.js"></script>
+      <script src="/employer1/assets/js/jarallax-video.min.js"></script>
+      <!--Main js-->
+      <script src="/employer1/assets/js/main.js"></script>
+
+   </head>
+   <body>
+      <!-- Header Area Start -->
+      <header class="jobguru-header-area stick-top forsticky page-header">
+         <div class="menu-animation">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-2">
+                     <div class="site-logo">
+                        <a href="/employer/home">
+                        <img src="/employer1/assets/img/logo-2.png" alt="jobguru" />
+                        </a>
+                     </div>
+                     <!-- Responsive Menu Start -->
+                     <div class="jobguru-responsive-menu"></div>
+                     <!-- Responsive Menu Start -->
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="header-menu">
+                        <nav id="navigation">
+                           <ul id="jobguru_navigation">
+                              <li class="active ">
+                                 <a href="/employer/home">home</a>
+
+                              </li>
+                              <li class=" ">
+                                 <a href="/employer/managejob">Manage job</a>
+
+                              </li>
+                              <li class="">
+                                 <a href="/employer/postjob">post a job</a>
+
+                              </li>
+
+                              <li class="has-children">
+                                 <a href="#">pages</a>
+
+                                 <ul>
+                             {{#if logedemployer}}
+                            <li><a href="/employer/home">{{logedemployer.employerFirstname}}</a></li>
+                           <li><a href="/employer/postjob" class="post-jobs">Post jobs</a></li>
+                           {{!-- <li><a href="register.html"><i class="fa fa-user"></i>sign up</a></li> --}}
+                           <li><a href="/employer/logout"><i class="fa fa-lock"></i>logout</a></li>
+                           {{/if}}
+                                 </ul>
+
+
+
+                                    {{!-- <li><a href="login.html">login</a></li>
+                                    <li><a href="register.html">register</a></li>
+                                 </ul> --}}
+
+                              </li>
+
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="header-right-menu">
+                        <ul>
+                             {{#if logedemployer}}
+                            <li><a href="/employer/home">{{logedemployer.employerFirstname}}</a></li>
+                           <li><a href="/employer/postjob" class="post-jobs">Post jobs</a></li>
+                           {{!-- <li><a href="register.html"><i class="fa fa-user"></i>sign up</a></li> --}}
+                           <li><a href="/employer/logout"><i class="fa fa-lock"></i>logout</a></li>
+                           {{/if}}
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header Area End -->
+       
+       
+       
+
+       {{{body}}}
+
+
+
+       
+      <!-- Footer Area Start -->
+      <footer class="jobguru-footer-area">
+         <div class="footer-top section_50">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                     <div class="single-footer-widget">
+                        <div class="footer-logo">
+                           <a href="index-2.html">
+                           <img src="/employer1/assets/img/logo.png" alt="jobguru logo" />
+                           </a>
+                        </div>
+                        <p>Aliquip exa consequat dui aut repahend vouptate elit cilum fugiat pariatur lorem dolor cit amet consecter adipisic elit sea vena eiusmod nulla</p>
+                        <ul class="footer-social">
+                           <li><a href="#" class="fb"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                           <li><a href="#" class="gp"><i class="fa fa-google-plus"></i></a></li>
+                           <li><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                     <div class="single-footer-widget">
+                        <h3>recent post</h3>
+                        <div class="latest-post-footer clearfix">
+                           <div class="latest-post-footer-left">
+                              <img src="/employer1/assets/img/footer-post-2.jpg" alt="post" />
+                           </div>
+                           <div class="latest-post-footer-right">
+                              <h4><a href="#">Website design trends for 2018</a></h4>
+                              <p>January 14 - 2018</p>
+                           </div>
+                        </div>
+                        <div class="latest-post-footer clearfix">
+                           <div class="latest-post-footer-left">
+                              <img src="/employer1/assets/img/footer-post-3.jpg" alt="post" />
+                           </div>
+                           <div class="latest-post-footer-right">
+                              <h4><a href="#">UI experts and modern designs</a></h4>
+                              <p>January 12 - 2018</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                     <div class="single-footer-widget">
+                        <h3>main links</h3>
+                        <ul>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> About jobguru</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> Delivery Information</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> Terms & Conditions</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> Customer support</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> Contact with an expert</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> community updates</a></li>
+                           <li><a href="#"><i class="fa fa-angle-double-right "></i> upcoming updates</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                     <div class="single-footer-widget footer-contact">
+                        <h3>Contact Info</h3>
+                        <p><i class="fa fa-map-marker"></i> 4257 Street, SunnyVale, USA </p>
+                        <p><i class="fa fa-phone"></i> 012-3456-789</p>
+                        <p><i class="fa fa-envelope-o"></i> info@jobguru.com</p>
+                        <p><i class="fa fa-envelope-o"></i> info@jobguru.com</p>
+                        <p><i class="fa fa-fax"></i> 112-3456-7898</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="copyright-left">
+                        <p>Copyright &copy; 2018 Themescare. All Rights Reserved</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer Area End -->
+       
+      
+   </body>
+
+<!-- Mirrored from themescare.com/demos/jobguru-version-2/employer-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Jul 2021 07:35:07 GMT -->
+</html>
+

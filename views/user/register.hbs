@@ -1,0 +1,147 @@
+
+       
+       
+
+       
+       
+      <!-- Breadcromb Area Start -->
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Register</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">pages</a></li>
+                           <li class="active-breadcromb"><a href="#">Register</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End -->
+       
+       
+      <!-- Login Area Start -->
+      <section class="jobguru-login-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3">
+                  <div class="login-box">
+                     <div class="login-title">
+                        <h3>Sign up</h3>
+                     </div>
+                     <form id="registerform">
+                        <div class="single-login-field">
+                           <input type="text" name="firstname" required placeholder="Name">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="email" name="email" required placeholder="Email Addresss">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="number" name="mobilenumber" required placeholder="Mobile number">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="password" name="password" id="password" required placeholder="Choose Password">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="password" name="confirmpassword"  id="confirmpassword"  placeholder="Confirm Password">
+                            <span id='message'></span>
+                        </div>
+                        {{!-- <div class="remember-row single-login-field clearfix">
+                           <p class="checkbox remember">
+                              <input class="checkbox-spin" type="checkbox" id="Freelance">
+                              <label for="Freelance"><span></span>accept terms & condition</label>
+                           </p>
+                        </div> --}}
+                        <div class="single-login-field">
+                           <button  id="submit" type="submit" onclick="return Validate()" >Sign in</button>
+                           {{!-- <input id="submit" type="submit" value="Change password" onSubmit="return validate();" /> --}}
+                        </div>
+                        <div id="hideafter">
+                         <div class="u-s-m-b-30"  id="invalidemailandmob">
+                            <span class="invalid" style="color:red;" id="invalid"> </span>
+                        </div>
+                         </div>
+                  
+                     <div class="dont_have">
+                        <a href="/login">Already have an account?</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Login Area End -->
+       
+       
+
+
+
+            <script>
+
+
+                    const $form = $('#registerform')
+                    $form.on('submit', submitHandler)
+                    function submitHandler (e) {
+                         e.preventDefault()
+                         console.log('hiiiiiii')
+                        $.ajax({
+                                url: '/registerUser',
+                                type:'POST',
+                                data: $form.serialize()
+                        }).done(response => {
+                                console.log(response)
+                                if(response.mobileandphonenumberexist==true){
+                                    console.log('in it')
+                                     document.getElementById('invalid').innerText='email and mobile number already registered'
+                                }else if(response.emailexist==true){
+                                     console.log('in email')
+                                     document.getElementById('invalid').innerText='invalid email or email already registered'
+                                }else if(response.mobileexist==true){
+                                     console.log('in email mobile ')
+                                     document.getElementById('invalid').innerText='mobile number is already registered'
+                                }else if(response.register==true){
+                                    window.location = '/login'
+                                }
+                            })
+                    }
+            </script>
+
+            <script>
+               $('#password, #confirmpassword').on('keyup', function () {
+                  console.log($('#password').val())
+                  if($('#password').val() == "" || $('#confirmpassword').val() == ""){
+                      $('#message').html('').css('color','green') 
+                  }
+                  else if ($('#password').val() == $('#confirmpassword').val()) {
+                     $('#message').html('Matching').css('color', 'green');
+                  } else 
+                     $('#message').html('Not Matching').css('color', 'red');
+               });
+
+
+                  function Validate() {
+                        var password = document.getElementById("password").value;
+                        var confirmPassword = document.getElementById("confirmpassword").value;
+                        if (password != confirmPassword) {
+                              alert("Passwords do not match.");
+                              return false;
+                        }
+                        return true;
+                     }
+            </script>

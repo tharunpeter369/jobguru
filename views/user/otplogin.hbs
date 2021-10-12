@@ -1,0 +1,173 @@
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+    background-color: red
+}
+
+.height-100 {
+    height: 100vh
+}
+
+.card {
+    width: 600px;
+    border: none;
+    height: 500px;
+    box-shadow: 0px 5px 20px 0px #d2dae3;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.card h6 {
+    color: red;
+    font-size: 20px
+}
+
+.inputs input {
+    width: 40px;
+    height: 40px
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0
+}
+
+.card-2 {
+    background-color: #fff;
+    padding: 10px;
+    width: 350px;
+    height: 100px;
+    bottom: -50px;
+    left: 20px;
+    position: absolute;
+    border-radius: 5px
+}
+
+.card-2 .content {
+    margin-top: 50px
+}
+
+.card-2 .content a {
+    color: red
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid red
+}
+
+.validate {
+    border-radius: 20px;
+    height: 40px;
+    background-color: red;
+    border: 1px solid red;
+    width: 140px
+}
+    </style>
+
+<body>
+
+    <div class="container height-100 d-flex justify-content-center align-items-center">
+        <div class="position-relative">
+            <div class="card p-2 text-center">
+                <div> <span>Enter the registered number</span> </div>
+                <div  class=""> <input class="m-2 text-center form-control rounded"  type="number" id="phonenumber" maxlength="10"/> </div>
+                <div class="mt-4"> <button class="btn btn-danger px-4 validate" id="sendphone">Send</button> </div>
+                <h6>Please enter the one time password <br> to verify your account</h6>
+                <div> <span>A code has been sent to</span> <small>registered number</small> </div>
+                <form action="/verify" id="otpform">
+                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">  <input class="m-2 text-center form-control rounded" name="one" type="text" id="first" maxlength="1" /> <input class="m-2 text-center form-control rounded" type="text" name="two" id="second" maxlength="1" /> <input class="m-2 text-center form-control rounded" name="three" type="text" id="third" maxlength="1" /> <input class="m-2 text-center  form-control rounded" name="four" type="text" id="fourth" maxlength="1" /> </div>
+                    <div class="mt-4"> <button class="btn btn-danger px-4 validate">Validate</button> </div>
+                </form>
+            </div>
+            <!-- <div class="card-2">
+                <div class="content d-flex justify-content-center align-items-center"> <span>Didn't get the code</span> <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a> </div>
+            </div> -->
+        </div>
+    </div>
+    
+</body>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+function OTPInput() {
+const inputs = document.querySelectorAll('#otp > *[id]');
+for (let i = 0; i < inputs.length; i++) { inputs[i].addEventListener('keydown', function(event) { if (event.key==="Backspace" ) { inputs[i].value='' ; if (i !==0) inputs[i - 1].focus(); } else { if (i===inputs.length - 1 && inputs[i].value !=='' ) { return true; } else if (event.keyCode> 47 && event.keyCode < 58) { inputs[i].value=event.key; if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } else if (event.keyCode> 64 && event.keyCode < 91) { inputs[i].value=String.fromCharCode(event.keyCode); if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } } }); } } OTPInput(); });
+</script>
+
+      <script>
+
+          $(document).on('click','#button',function(e){
+              e.preventDefault();
+              $.ajax({})
+          })
+
+
+
+
+         $(document).on('click', '#sendphone', function(e){
+   e.preventDefault();
+   var mobnum = document.getElementById('phonenumber').value
+   console.log(mobnum)
+//your code goes here
+
+    $.ajax({
+        type: "POST",
+        url: '/checkmobilenumber',
+        {{!-- data: { jobid: $(this).val()}, --}}
+        data: { phonenumber: mobnum},
+        success:function(result) {
+           console.log(result)
+               if(result.otpsend==true){
+                    Swal.fire('OTP...', 'sended succesfully!',)
+              {{!-- console.log('hello')
+              window.location.href = "/employer/resumeview"; --}}
+           }else{
+              Swal.fire('Sorry...', 'Mobile number is not correct',)
+           }
+          {{!-- alert('ok'); --}}
+        },
+        error:function(result) {
+        }
+    });
+});
+
+
+$("#otpform").submit(function(e) {
+    e.preventDefault(); // prevent actual form submit
+    var form = $(this);
+    var url = form.attr('action'); //get submit url [replace url here if desired]
+    $.ajax({
+         type: "POST",
+         url: url,
+         data: form.serialize(), // serializes form input
+         success: function(data){
+             if(data.validUser==true){
+                 window.location.href = "/";
+             }else{
+                 Swal.fire('Sorry...', 'Wrong entry',)
+             }
+             console.log(data);
+         }
+    });
+});
+
+
+
+
+</script>
+
+

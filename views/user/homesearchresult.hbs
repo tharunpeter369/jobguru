@@ -1,0 +1,531 @@
+
+      {{!-- <!-- Breadcromb Area Start -->
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Browse Jobs</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">candidates</a></li>
+                           <li class="active-breadcromb"><a href="#">browse jobs</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End --> --}}
+
+            <!-- Banner Area Start -->
+      <section class="jobguru-banner-area">
+         <div class="banner-slider owl-carousel">
+            <div class="banner-single-slider slider-item-1">
+               <div class="slider-offset"></div>
+            </div>
+            <div class="banner-single-slider slider-item-2">
+               <div class="slider-offset"></div>
+            </div>
+         </div>
+         <div class="banner-text">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="banner-search">
+                        <h2>Hire expert freelancers.</h2>
+                        <h4>We have 1542 job offers for you! </h4>
+                        <form method="GET" action="/homesearch">
+                           <div class="banner-form-box">
+                              <div class="banner-form-input">
+                                 <input type="text" name="jobtitle" placeholder="Job Title, Keywords, or Phrase">
+                              </div>
+                              {{!-- <div class="banner-form-input">
+                                 <input type="text" placeholder="City, State or ZIP">
+                              </div> --}}
+                              <div class="banner-form-input">
+                                 <select name="category" class="banner-select">
+                                          <option value="" selected>Select Sector</option>
+                                          <option value="Finance">Accounting / Finance</option>
+                                          <option value="Automotive">Automotive Jobs</option>
+                                          <option value="Construction">Construction / Facilities</option>
+                                          <option value="Design">Design,& Multimedia</option>
+                                          <option value="Art">Art</option>
+                                          <option value="Animation">Animation</option>
+                                          <option value="GraphicDesign">Graphic Design</option>
+                                          <option value="Illustration">Illustration</option>
+                                          <option value="Mechanic">Mechanic</option>
+                                          <option value="Photograhy">Photograhy</option>
+                                          <option value="Education">Education Training</option>
+                                          <option value="Healthcare">Healthcare</option>
+                                          <option value="Restaurant">Restaurant / Food Service</option>
+                                          <option value="Sales">Sales / Marketing</option>
+                                          <option value="Advertising">Display Advertising</option>
+                                 </select>
+                              </div>
+                              <div class="banner-form-input">
+                                 <button type="submit"><i class="fa fa-search"></i></button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Banner Area End -->
+       
+       
+       
+      <!-- Top Job Area Start -->
+      <section class="jobguru-top-job-area browse-page section_70">
+         <div class="">
+            <div class="row">
+               {{!-- <div class="col-lg-3 col-md-11 mx-auto">
+                  <div class="job-grid-sidebar">
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-location">
+                        <h3>location</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <p>
+                                 <input type="search" placeholder="Location">
+                              </p>
+                              <p class="location-value">
+                                 <input type="text" value="50">
+                              </p>
+                              <div class="dropdown">
+                                 <button class="btn-dropdown dropdown-toggle" type="button" id="location" data-bs-toggle="dropdown" aria-haspopup="true">km</button>
+                                 <ul class="dropdown-menu" aria-labelledby="location">
+                                    <li>km</li>
+                                    <li>miles</li>
+                                 </ul>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-keywords">
+                        <h3>Keywords</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <select class="sidebar-category-select" name="states[]" multiple="multiple">
+                                 <option value="1">accounting</option>
+                                 <option value="2">finance</option>
+                                 <option value="3">automotive</option>
+                                 <option value="4">construction</option>
+                                 <option value="5">photoshop</option>
+                                 <option value="6">graphics</option>
+                                 <option value="7">After affects</option>
+                                 <option value="8">poster design</option>
+                              </select>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-category">
+                        <h3>Category</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <select class="sidebar-category-select-2" name="states[]">
+                                 <option value="1">any category</option>
+                                 <option value="2">accounting/finance</option>
+                                 <option value="3">automotive jobs</option>
+                                 <option value="4">construction</option>
+                                 <option value="5">design, art & multimedia</option>
+                                 <option value="6">education training</option>
+                                 <option value="7">restaurent/food</option>
+                                 <option value="7">programming/tech</option>
+                                 <option value="7">sales/marketing</option>
+                                 <option value="7">data science/analysis</option>
+                              </select>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-location">
+                        <h3>Date Posted</h3>
+                        <div class="date-post-job job-sidebar-box">
+                           <div class="form-group form-radio">
+                              <input id="last_hour" name="radio" type="radio">
+                              <label for="last_hour" class="inline control-label">last hour</label>
+                           </div>
+                           <div class="form-group form-radio">
+                              <input id="last_24" name="radio" type="radio">
+                              <label for="last_24" class="inline control-label">Last 24 hours</label>
+                           </div>
+                           <div class="form-group form-radio">
+                              <input id="last_7" name="radio" type="radio">
+                              <label for="last_7" class="inline control-label">Last 7 days</label>
+                           </div>
+                           <div class="form-group form-radio">
+                              <input id="last_14" name="radio" type="radio">
+                              <label for="last_14" class="inline control-label">Last 14 days</label>
+                           </div>
+                           <div class="form-group form-radio">
+                              <input id="last_30" name="radio" type="radio">
+                              <label for="last_30" class="inline control-label">Last 30 days</label>
+                           </div>
+                           <div class="form-group form-radio">
+                              <input id="last_all" name="radio" type="radio">
+                              <label for="last_all" class="inline control-label">all</label>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-type">
+                        <h3>job type</h3>
+                        <div class="job-sidebar-box">
+                           <ul>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin" type="checkbox" id="Freelance" />
+                                 <label for="Freelance"><span></span>Freelance</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin" type="checkbox" id="Full_Time" />
+                                 <label for="Full_Time"><span></span>Full Time</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin" type="checkbox" id="Internship" />
+                                 <label for="Internship"><span></span>Internship</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin" type="checkbox" id="Part_Time" />
+                                 <label for="Part_Time"><span></span>Part Time</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin" type="checkbox" id="Temporary" />
+                                 <label for="Temporary"><span></span>Temporary</label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-salary">
+                        <h3>Filter by Salary</h3>
+                        <div class="job-sidebar-box">
+                           <p>
+                              <input type="text" id="amount" readonly>
+                           </p>
+                           <div id="slider"></div>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                  </div>
+               </div> --}}
+               <div class="col-lg-9 col-md-11 mx-auto">
+                  <div class="job-grid-right">
+                     {{!-- <div class="browse-job-head-option">
+                        <div class="job-browse-search">
+                           <form>
+                              <input type="search" placeholder="Search Jobs Here...">
+                              <button type="submit"><i class="fa fa-search"></i></button>
+                           </form>
+                        </div>
+                        <div class="job-browse-action">
+                           <div class="email-alerts">
+                              <input type="checkbox" class="styled" id="b_1">
+                              <label class="styled" for="b_1">email alerts for this search</label>
+                           </div>
+                           <div class="dropdown">
+                              <button class="btn-dropdown dropdown-toggle" type="button" id="dropdowncur" data-bs-toggle="dropdown" aria-haspopup="true">Sort By</button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdowncur">
+                                 <li>Newest</li>
+                                 <li>Oldest</li>
+                                 <li>Random</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div> --}}
+                     <div class="row">
+
+                        {{#each searchresult}}
+                           <div class="col-lg-4 col-md-4">
+                              <div class="sigle-top-job">
+                                 <div class="top-job-company-image">
+                                    <div class="company-logo-img">
+                                       <a href="#">
+                                       <img src="/employprofile/{{this.employer_id}}.png" style=" height: 100%;" alt="company image" />
+                                       </a>
+                                    </div>
+                                    <h3><a href="/jobInDetails?jobid={{this._id}}">{{this.jobTitle}}</a></h3>
+                                 </div>
+                                 <div class="top-job-company-desc">
+                                    <ul>
+                                       <li>Location <span class="company-state"><i class="fa fa-map-marker"></i>{{this.Location}}</span></li>
+                                       {{!-- <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>${{this.minSalary}}-${{this.maxSalary}}</span></li> --}}
+                                       <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                    </ul>
+
+                                    {{#if userapplied}}
+                                       <div class="top-job-company-btn">
+                                       <a class="jobguru-btn-2">Applied</a>
+                                    </div>
+                                    {{else}}
+                                       <div class="top-job-company-btn">
+                                       <a href="/applyjob?jobid={{this._id}}&route=homesearch" class="jobguru-btn-2">Apply Now</a>
+                                    </div>
+                                    {{/if}}
+                               
+{{!-- 
+                                    {{#if ../userId}}
+                                    {{#if this.applied_users}} 
+
+                                     {{#ifIn ../userId this.applied_users  }}
+                                    <div class="top-job-company-btn">
+                                       <a href="/applyjob?jobid={{this._id}}" class="jobguru-btn-2"Applied>Bid </a>
+                                    </div>
+                                          {{else}}
+                   
+                                    <div class="top-job-company-btn">
+                                       <a href="/applyjob?jobid={{this._id}}" class="jobguru-btn-2">Bid now SOME ONE APPIED</a>
+                                    </div>
+                                          {{/ifIn}}
+                                     {{else}}
+                                     <div class="top-job-company-btn">
+                                       <a href="/applyjob?jobid={{this._id}}" class="jobguru-btn-2">Bid now NO ONE APPLIED</a>
+                                    </div>
+
+                                    {{/if}}
+                                     {{else}}
+                                     <div class="top-job-company-btn">
+                                       <a href="/applyjob?jobid={{this._id}}" class="jobguru-btn-2">Bid now NOT LOGGED IN</a>
+                                    </div>
+                                    {{/if}}  --}}
+                                         
+                                   
+
+                                                 
+                                  
+                                    
+              
+
+                         
+                                 </div>
+                              </div>
+                           </div>
+                           {{/each}}
+
+
+                        {{!-- <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-2.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">Certified civil engineer</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-4.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">C Developer (Senior) C .Net</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-2.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">Certified civil engineer</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-4.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">C Developer (Senior) C .Net</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-2.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">Certified civil engineer</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-4.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">C Developer (Senior) C .Net</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                           <div class="sigle-top-job">
+                              <div class="top-job-company-image">
+                                 <div class="company-logo-img">
+                                    <a href="#">
+                                    <img src="assets/img/company-logo-2.png" alt="company image" />
+                                    </a>
+                                 </div>
+                                 <h3><a href="#">Certified civil engineer</a></h3>
+                              </div>
+                              <div class="top-job-company-desc">
+                                 <ul>
+                                    <li>Location <span class="company-state"><i class="fa fa-map-marker"></i> Brisbane</span></li>
+                                    <li>salary <span class="open-icon"><i class="fa fa-credit-card-alt"></i>$600-$1200</span></li>
+                                    <li>status <span class="varify"><i class="fa fa-check"></i>part time</span></li>
+                                 </ul>
+                                 <div class="top-job-company-btn">
+                                    <a href="#" class="jobguru-btn-2">Bid now</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div> --}}
+
+
+                     </div>
+                     <!-- end row -->
+
+
+                     {{!-- <div class="row">
+                        <div class="col-md-12">
+                           <div class="pagination-box-row">
+                              <p>Page 1 of 6</p>
+                              <ul class="pagination">
+                                 <li class="active"><a href="#">1</a></li>
+                                 <li><a href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li>...</li>
+                                 <li><a href="#">6</a></li>
+                                 <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div> --}}
+
+
+                     <!-- end pagination row -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Top Job Area End -->
+       
+       
+      

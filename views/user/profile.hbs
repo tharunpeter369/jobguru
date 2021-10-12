@@ -1,0 +1,304 @@
+     
+       {{!-- <link href="/cropper/cropper.min.css" rel="stylesheet" type="text/css"/> --}}
+     
+      <!-- Breadcromb Area Start -->
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Submit resume</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">candidates</a></li>
+                           <li class="active-breadcromb"><a href="#">Submit resume</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End -->
+       
+       
+      <!-- Submit Resume Area Start -->
+      <section class="jobguru-submit-resume-area section_70">
+         <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-lg-3 dashboard-left-border">
+                  <div class="dashboard-left">
+                     <ul class="dashboard-menu">
+                        <li ><a href="/machanetestdata"><i class="fa fa-users"></i>Machine Test</a></li>
+                        <li><a href="/"><i class="fa fa-envelope-open"></i>Home</a></li>
+                        <li><a href="/browsejobs?next=1"><i class="fa fa-briefcase"></i>Browse Job</a></li>
+                        {{!-- <li><a href="#"><i class="fa fa-power-off"></i>LogOut</a></li> --}}
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="col-md-8 col-lg-9">
+                  <div class="submit-resume-box">
+                     <form action="/createresume" method="POST" enctype="multipart/form-data">
+                        <div class="resume-box">
+                           <div class="single-resume-feild resume-avatar">
+                              <div class="resume-image">
+                                 <img src="/userprofile/{{userprofiledata.user_id}}.jpg" id="photo" alt="resume avatar" />
+                                 {{!-- <img src="/userprofile/{{userprofiledata._id}}.jpg" alt="resume avatar" /> --}}
+                                    {{!-- <img src="/employprofile/{{profiledispalydata.employer_id}}.png" id="photo"  alt="resume avatar"> --}}
+                                  {{!-- <img src="/employer1/assets/img/resume-avatar.jpg" id="photo" alt="resume avatar" /> --}}
+                                 <div class="resume-avatar-hover">
+                                    <div class="resume-avatar-upload">
+                                       <p>
+                                          <i class="fa fa-upload"></i>
+                                          upload
+                                       </p>
+                                       <input type="file" name="image" class="image" id="profilepic" accept="image/*" onchange="viewimage(event)">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <h3>Personal Information</h3>
+                           <div class="single-resume-feild feild-flex-2">
+                              <div class="single-input">
+                                 <label for="name">Your Name:</label>
+                                 <input type="text" value="{{userprofiledata.profilename}}" required name="profilename" placeholder="Your Full Name" id="name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" >
+                              </div>
+                              <div class="single-input">
+                                 <label for="p_title">Professional title:</label>
+                                 <input type="text" value="{{userprofiledata.jobtitle}}" required name="jobtitle" placeholder="e.g Web Developer" id="p_title" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild feild-flex-2">
+                              <div class="single-input">
+                                 <label for="Email">Email:</label>
+                                 <input type="email" name="profileemail" required value="{{userprofiledata.profileemail}}" placeholder="Your Email Address" id="Email">
+                              </div>
+                              <div class="single-input">
+                                 <label for="Phone">Phone:</label>
+                                 <input type="tel" name="profilenumber" required value="{{userprofiledata.profilenumber}}" placeholder="Phone Number" onkeypress="return onlyNumberKey(event)"  id="Phone">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild feild-flex-2">
+                              <div class="single-input">
+                                 <label for="State">State:</label>
+                                 <select id="State" name="State">
+                                    <option value="{{userprofiledata.State}}" selected>{{userprofiledata.State}}</option>
+                                    <option>Kerala</option>
+                                    <option>Tamilnadu</option>
+                                    <option>karnataka</option>
+                                    <option>Hyderabad</option>
+                                    <option>Goa</option>>
+                                 </select>
+                              </div>
+                              <div class="single-input">
+                                 <label for="Address">Address:</label>
+                                 <input type="text" name="profileaddress" value="{{userprofiledata.profileaddress}}" required placeholder="Street Address" id="Address">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="Bio">Introduce Yourself:</label>
+                                 <textarea id="Bio" name="profilebio" required placeholder="Write Your Bio Here...">{{userprofiledata.profilebio}}</textarea>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="resume-box">
+                           <h3>Education</h3>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="Degree">Qulaification:</label>
+                                 <input type="text" name="qualificaiton" value="{{userprofiledata.qualificaiton}}" placeholder="Degree's Title" id="Degree">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild feild-flex-2">
+                              <div class="single-input">
+                                 <label for="datepicker_form">From:</label>
+                                 {{!-- <input type="date" placeholder="02.10.2015" value="{{userprofiledata.qualificaionfromdate}}" name="qualificaionfromdate" > --}}
+                                        <input type="date" name="qualificaionfromdate" placeholder="02.10.2015" value="{{userprofiledata.qualificaionfromdate}}" >
+                              </div>
+                              <div class="single-input">
+                                 <label for="datepicker_to">To:</label>
+                                 {{!-- <input type="date" name="qualificaiontodate" placeholder="06.11.2017" value="{{userprofiledata.qualificaiontodate}}" id="datepicker_to" class="datepicker"> --}}
+                                 <input type="date" name="qualificaiontodate" placeholder="06.11.2017" value="{{userprofiledata.qualificaiontodate}}" >
+                              </div>
+                           </div>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="Institute"> Institute:</label>
+                                 <input type="text" name="Institute" required value="{{userprofiledata.Institute}}"  placeholder="Institution Name" id="Institute">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="edu_info">Additional Information: <span>(optional)</span></label>
+                                 <textarea id="edu_info" name="additionalinfo" required placeholder="Education Experience Brief">{{userprofiledata.additionalinfo}}</textarea>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="resume-box">
+                           <h3>Work Experience</h3>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="j_post">Job Post:</label>
+                                 <input type="text" name="expjobtitle" required value="{{userprofiledata.expjobtitle}}"  placeholder="Job Post Title" id="j_post">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild feild-flex-2">
+                              <div class="single-input">
+                                 <label for="datepicker_form2">From:</label>
+                                 <input type="date"  name="expjobfrom" placeholder="02-10-2015" value="{{userprofiledata.expjobfrom}}" id="datepicker_form2" >
+                              </div>
+                              <div class="single-input">
+                                 <label for="datepicker_to2">To:</label>
+                                 <input type="date" name="expjobto" value="{{userprofiledata.expjobto}}"  placeholder="06-11-2017" id="datepicker_to2" >
+                              </div>
+                           </div>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="Company"> Company:</label>
+                                 <input type="text" name="expjobcompany" value="{{userprofiledata.expjobcompany}}" placeholder="Company Name" id="Company">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="work_info">Additional Information: <span>(optional)</span></label>
+                                 <textarea id="work_info" name="workexperiancebrief" placeholder="Work Experience Brief">{{userprofiledata.workexperiancebrief}}</textarea>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="resume-box">
+                           <h3>Skills & Portfolio</h3>
+
+                           <div class="single-resume-feild ">
+                              <div class="single-input">
+                                 <label for="skill">Skills:</label>
+                                 <input type="text" name="skills" value="{{userprofiledata.skills}}" placeholder="Comma separate a list of relevant skills" id="skill">
+                              </div>
+                           </div>
+                           <div class="single-resume-feild feild-flex-2">
+
+
+                              <div class="single-input">
+                                 <label for="Portfolio">Linkdin:</label>
+                                 <input type="text" name="Linkedin" value="{{userprofiledata.Linkedin}}" placeholder="Linkedin URL" id="Portfolio">
+                              </div>
+
+                              <div class="single-input">
+                                 <label for="Portfolio">facebook:</label>
+                                 <input type="text" name="facebook" value="{{userprofiledata.facebook}}" placeholder="Facebook URL" id="facebook">
+                              </div>
+
+                              <div class="single-input">
+                                 <label for="w_screen">Resume upload</label>
+                                 <div class="product-upload"> 
+                                   <p>
+                                       <i class="fa fa-upload"></i>
+                                       Upload resume in pdf
+                                    </p>
+
+                                    <input type="file" name="resumefile" id="w_screen"  accept="application/pdf">
+                                 
+                                 
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                        <div class="submit-resume"> 
+                           <button type="submit">Save Resume</button>
+                        </div>
+                     </form>
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Submit Resume Area End -->
+
+      {{!-- <div class="cv"> Would you like to attach you CV? <a href="" id="resume_link">Click here</a></div>
+    <input type="file" id="resume" style="visibility: hidden"> --}}
+
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+
+      <script>
+
+         var myfile="";
+
+         $('#w_screen').on( 'change', function() {
+            myfile= $( this ).val();
+            var ext = myfile.split('.').pop();
+            if(ext=="pdf"){
+               Swal.fire('pdf file selected');
+            } else{
+               document.getElementById('w_screen').value= null
+               Swal.fire('please select pdf file');
+            }
+         });
+
+      </script>
+
+
+
+
+
+      <script>
+         var myfile="";
+         $('#profilepic').on( 'change', function() {
+            myfile= $( this ).val();
+            var ext = myfile.split('.').pop();
+            if(ext=="jpeg" || ext=="jpg" || ext=="png"){
+               Swal.fire('Image file selected');
+            } else{
+               document.getElementById('profilepic').value= null
+               Swal.fire('please select Image file');
+            }
+         });
+      </script>
+
+
+
+
+
+
+
+
+ <script>
+    function onlyNumberKey(evt) {
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+
+
+
+<script>
+   function viewimage(event){
+      document.getElementById('photo').src=URL.createObjectURL(event.target.files[0])
+   }
+</script>
+
+
+
+
+      

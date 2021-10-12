@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   
+<!-- Mirrored from themescare.com/demos/jobguru-version-2/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Jul 2021 07:35:18 GMT -->
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="jobguru | Job Board HTML Templates from Themescare">
+      <meta name="keyword" content="Job, freelancer, employee, marketplace">
+      <meta name="author" content="Themescare">
+      <!-- Title -->
+      <title>jobguru</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="/employer1/assets/img/favicon/favicon-32x32.png">
+      <!--Bootstrap css-->
+      <link rel="stylesheet" href="/employer1/assets/css/bootstrap.css">
+      <!--Font Awesome css-->
+      <link rel="stylesheet" href="/employer1/assets/css/font-awesome.min.css">
+      <!--Magnific css-->
+      <link rel="stylesheet" href="/employer1/assets/css/magnific-popup.css">
+      <!--Owl-Carousel css-->
+      <link rel="stylesheet" href="/employer1/assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="/employer1/assets/css/owl.theme.default.min.css">
+      <!--Animate css-->
+      <link rel="stylesheet" href="/employer1/assets/css/animate.min.css">
+      <!--Select2 css-->
+      <link rel="stylesheet" href="/employer1/assets/css/select2.min.css">
+      <!--Slicknav css-->
+      <link rel="stylesheet" href="/employer1/assets/css/slicknav.min.css">
+      <!--Bootstrap-Datepicker css-->
+      <link rel="stylesheet" href="/employer1/assets/css/bootstrap-datepicker.min.css">
+      <!--Jquery UI css-->
+      <link rel="stylesheet" href="/employer1/assets/css/jquery-ui.min.css">
+      <!--Perfect-Scrollbar css-->
+      <link rel="stylesheet" href="/employer1/assets/css/perfect-scrollbar.min.css">
+      <!--Site Main Style css-->
+      <link rel="stylesheet" href="/employer1/assets/css/style.css">
+      <!--Responsive css-->
+      <link rel="stylesheet" href="/employer1/assets/css/responsive.css">
+   </head>
+   <body>
+       
+       
+
+       
+       
+      <!-- Breadcromb Area Start -->
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Register</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">pages</a></li>
+                           <li class="active-breadcromb"><a href="#">Register</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End -->
+       
+       
+      <!-- Login Area Start -->
+      <section class="jobguru-login-area section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3">
+                  <div class="login-box">
+                     <div class="login-title">
+                        <h3>Sign up</h3>
+                     </div>
+                     <form id="registerform">
+                        <div class="single-login-field">
+                           <input type="text" name="firstname" required placeholder="Name">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="email" name="email" required placeholder="Email Addresss">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="number" name="mobilenumber" required placeholder="Mobile number">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="password" name="password" id="password" required placeholder="Choose Password">
+                        </div>
+                        <div class="single-login-field">
+                           <input type="password" name="confirmpassword" id="confirmpassword" required placeholder="Confirm Password">
+                              <span id='message'></span>
+                        </div>
+                        <div class="remember-row single-login-field clearfix">
+                           {{!-- <p class="checkbox remember">
+                              <input class="checkbox-spin" type="checkbox" id="Freelance">
+                              <label for="Freelance"><span></span>accept terms & condition</label>
+                           </p> --}}
+                        </div>
+                        <div class="single-login-field">
+                           <button id="submit" type="submit" onclick="return Validate()">Sign in</button>
+                        </div>
+                        <div id="hideafter">
+                         <div class="u-s-m-b-30"  id="invalidemailandmob">
+                            <span class="invalid" style="color:red;" id="invalid"> </span>
+                        </div>
+                         </div>
+                  
+                     <div class="dont_have">
+                        <a href="/employer">Already have an account?</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Login Area End -->
+       
+       
+
+      <!--Jquery js-->
+      <script src="/employer1/assets/js/jquery-3.6.0.min.js"></script>
+      <!--Bootstrap js-->
+      <script src="/employer1/assets/js/bootstrap.bundle.min.js"></script>
+      <!--Bootstrap Datepicker js-->
+      <script src="/employer1/assets/js/bootstrap-datepicker.min.js"></script>
+      <!--Perfect Scrollbar js-->
+      <script src="/employer1/assets/js/jquery-perfect-scrollbar.min.js"></script>
+      <!--Owl-Carousel js-->
+      <script src="/employer1/assets/js/owl.carousel.min.js"></script>
+      <!--SlickNav js-->
+      <script src="/employer1/assets/js/jquery.slicknav.min.js"></script>
+      <!--Magnific js-->
+      <script src="/employer1/assets/js/jquery.magnific-popup.min.js"></script>
+      <!--Select2 js-->
+      <script src="/employer1/assets/js/select2.min.js"></script>
+      <!--jquery-ui js-->
+      <script src="/employer1/assets/js/jquery-ui.min.js"></script>
+      <!--Custom-Scrollbar js-->
+      <script src="/employer1/assets/js/custom-scrollbar.js"></script>
+      <!--Jarallax js-->
+      <script src="/employer1/assets/js/jarallax.min.js"></script>
+      <script src="/employer1/assets/js/jarallax-video.min.js"></script>
+      <!--Main js-->
+      <script src="/employer1/assets/js/main.js"></script>
+   </body>
+
+<!-- Mirrored from themescare.com/demos/jobguru-version-2/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Jul 2021 07:35:18 GMT -->
+</html>
+
+
+
+            <script>
+
+
+                    const $form = $('#registerform')
+                    $form.on('submit', submitHandler)
+                    function submitHandler (e) {
+                         e.preventDefault()
+                         console.log('hiiiiiii')
+                        $.ajax({
+
+                              url: '/employer/registerEmployer',
+
+                                {{!-- url: '/employer/twilioauth', --}}
+                                type:'POST',
+                                data: $form.serialize()
+                        }).done(response => {
+                                console.log(response)
+                                if(response.mobileandphonenumberexist==true){
+                                    console.log('in it')
+                                     document.getElementById('invalid').innerText='email and mobile number already registered'
+                                }else if(response.emailexist==true){
+                                     console.log('in email')
+                                     document.getElementById('invalid').innerText='invalid email or email already registered'
+                                }else if(response.mobileexist==true){
+                                     console.log('in email mobile ')
+                                     document.getElementById('invalid').innerText='mobile number is already registered'
+                                }else if(response.register==true){
+                                    window.location = '/employer/otp'
+                                }
+                            })
+                    }
+            </script>
+
+
+
+            <script>
+               $('#password, #confirmpassword').on('keyup', function () {
+                  console.log($('#password').val())
+                  if($('#password').val() == "" || $('#confirmpassword').val() == ""){
+                      $('#message').html('').css('color','green') 
+                  }
+                  else if ($('#password').val() == $('#confirmpassword').val()) {
+                     $('#message').html('Matching').css('color', 'green');
+                  } else 
+                     $('#message').html('Not Matching').css('color', 'red');
+               });
+
+
+                  function Validate() {
+                        var password = document.getElementById("password").value;
+                        var confirmPassword = document.getElementById("confirmpassword").value;
+                        if (password != confirmPassword) {
+                              alert("Passwords do not match.");
+                              return false;
+                        }
+                        return true;
+                     }
+            </script>
+
+
+
+                                {{!-- url: '/employer/registerEmployer', --}}

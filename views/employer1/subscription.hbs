@@ -1,0 +1,277 @@
+
+<body>
+
+
+
+
+
+    {{!-- <!-- Breadcromb Area Start -->
+    <section class="jobguru-breadcromb-area">
+        <div class="breadcromb-top section_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcromb-box">
+                            <h3>About us</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcromb-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcromb-box-pagin">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">pages</a></li>
+                                <li class="active-breadcromb"><a href="#">About us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcromb Area End -->
+
+
+    <!-- About Area Start -->
+    <section class="jobguru-about-page section_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-main-box">
+                        <p>Donec at cursus sem. Duis condimentum posuere
+                            purus, at venenatis tellus mollis. Vestibulum cursus
+                            convallis venenatis. Sed ut blandit mauris. Proin pret-
+                            ium consequat est, sit amet consectetu
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="single-about-box">
+                        <div class="about-box-img">
+                            <a href="#">
+                                <img src="assets/img/abt-1.jpg" alt="about image" />
+                            </a>
+                        </div>
+                        <div class="about-box-text">
+                            <h3>Advertise A Job</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="single-about-box">
+                        <div class="about-box-img">
+                            <a href="#">
+                                <img src="assets/img/abt-2.jpg" alt="about image" />
+                            </a>
+                        </div>
+                        <div class="about-box-text">
+                            <h3>Recruiter Profiles</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="single-about-box">
+                        <div class="about-box-img">
+                            <a href="#">
+                                <img src="assets/img/abt-3.jpg" alt="about image" />
+                            </a>
+                        </div>
+                        <div class="about-box-text">
+                            <h3>Temp Search</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Area End --> --}}
+
+  
+
+
+    <!-- Pricing Area Start -->
+    <section class="jobguru-pricing-area section_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-heading">
+                        <h2>choose best <span>plan</span></h2>
+                        <p>A better career is out there. We'll help you find it. We're your first step to becoming everything you want to be.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+
+
+
+                <div class="col-md-4 no-pad-right">
+
+                <form action="payment" method="POST">
+                    <div class="single-pricing price-basic">
+                        <input type="text" name="price" style="display: none;" value="500" readonly >
+                        <input type="text" name="plan" style="display: none;" value="base" readonly >
+    
+                        <div class="price-heading">
+                            <h3>basic</h3>
+                        </div>
+                        <div class="price-value">
+                            <h2><i class="fa fa-inr"></i>500</h2>
+                            {{!-- <p>per month</p> --}}
+                        </div>
+                        {{!-- <div class="price-btn">
+                            <a href="/subscription" class="jobguru-btn-2">subscribe</a>
+                        </div> --}}
+                        <script
+                            src="//checkout.stripe.com/v2/checkout.js"
+                            class="stripe-button"
+                            data-key="{{publisherkey}}" 
+                            data-amount="50000" 
+                            data-currency="inr" 
+                            data-name="Job Guru" 
+                            data-description="Basic" 
+                            data-locale="auto" > 
+                        </script> 
+
+   
+                            <button type="submit" class="yourCustomClass jobguru-btn-2">Subscribe</button>
+
+                        
+                        <div class="price-body">
+                            <p>Features of Basic Plan</p>
+                            <p>1 Listing</p>
+                            <p>10 Days Visibility</p>
+                            {{!-- <p>10 bids per day</p> --}}
+                            {{!-- <p>Highlighted in Search Results</p> --}}
+                        </div>
+                    </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="col-md-4 no-pad-all">
+
+                      <form action="payment1" method="POST">
+
+
+                    <div class="single-pricing price-standard">
+                        <input type="text" name="price" style="display: none;" value="4000" readonly >
+                        <input type="text" name="plan" style="display: none;" value="gold" readonly >
+            
+                        <div class="price-heading">
+                            <h3>Gold</h3>
+                        </div>
+                        <div class="price-value">
+                            <h2><i class="fa fa-inr"></i> 4000</h2>
+                            {{!-- <p>per month</p> --}}
+                        </div>
+                        {{!-- <div class="price-btn">
+                            <a href="#" class="jobguru-btn-2">subscribe</a>
+                        </div> --}}
+
+                        <script
+                            src="//checkout.stripe.com/v2/checkout.js"
+                            class="stripe-button"
+                            data-key="{{publisherkey}}" 
+                            data-amount="400000" 
+                            data-currency="inr" 
+                            data-name="Job Guru" 
+                            data-description="Gold" 
+                            data-locale="auto" > 
+                        </script> 
+
+                            <button type="submit" class="yourCustomClass jobguru-btn-2">Subscribe</button>
+
+
+
+                        <div class="price-body">
+                            <p>Features of Gold Plan</p>
+                            <p>12 Listing</p>
+                            <p>30 Days Visibility</p>
+                            {{!-- <p>10 bids per day</p> --}}
+                            {{!-- <p>Highlighted in Search Results</p> --}}
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+                <div class="col-md-4 no-pad-left">
+                        <form action="payment2" method="POST">
+                    <div class="single-pricing price-premium">
+                        <input type="text" name="price" style="display: none;" value="10000" readonly >
+                        <input type="text" name="plan" style="display: none;" value="platinum" readonly >
+                        <div class="price-heading">
+                            <h3>Platinum</h3>
+                        </div>
+                        <div class="price-value">
+                            <h2><i class="fa fa-inr"></i>10000</h2>
+                            {{!-- <p>per month</p> --}}
+                        </div>
+
+                        {{!-- <div class="price-btn">
+                            <a href="#" class="jobguru-btn-2">subscribe</a>
+                        </div> --}}
+
+                        <script
+                            src="//checkout.stripe.com/v2/checkout.js"
+                            class="stripe-button"
+                            data-key="{{publisherkey}}" 
+                            data-amount="1000000" 
+                            data-currency="inr" 
+                            data-name="Job Guru" 
+                            data-description="Platinum" 
+                            data-locale="auto" > 
+                        </script> 
+                        <button type="submit" class="yourCustomClass jobguru-btn-2">Subscribe</button>
+
+                        <div class="price-body">
+                            <p>Features of Platinum Plan</p>
+                            <p>20 Listing</p>
+                            <p>50 Days Visibility</p>
+                            {{!-- <p>10 bids per day</p> --}}
+                            {{!-- <p>Highlighted in Search Results</p> --}}
+                        </div>
+
+                    </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+        <script>
+        // Hide default stripe button, be careful there if you
+        // have more than 1 button of that class
+        {{!-- document.getElementsByClassName("stripe-button-el")[0].style.display = 'none'; --}}
+         var stripebutton= document.querySelectorAll(".stripe-button-el")
+         for(let i=0;i<stripebutton.length; i++){
+             stripebutton[i].style.display="none"
+         }
+    </script>
+
+    
+    <!-- Pricing Area End -->
+
+
+    <!-- Team Area Start -->
+
+ 
+
+
+
+
+    <!-- Team Area End -->
+
+
+   

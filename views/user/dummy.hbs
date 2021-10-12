@@ -1,0 +1,860 @@
+<!-- Breadcromb Area Start -->
+      <section class="jobguru-breadcromb-area">
+         <div class="breadcromb-top section_100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box">
+                        <h3>Browse Jobs</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcromb-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="breadcromb-box-pagin">
+                        <ul>
+                           <li><a href="#">home</a></li>
+                           <li><a href="#">candidates</a></li>
+                           <li class="active-breadcromb"><a href="#">browse jobs</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcromb Area End -->
+       
+       
+      <!-- Top Job Area Start -->
+      <section class="jobguru-top-job-area browse-page section_70">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-lg-3 mx-auto">
+                  <div class="job-grid-sidebar">
+                     <!-- Single Job Sidebar Start -->
+                     {{!-- <div class="single-job-sidebar sidebar-location">
+                        <h3>location</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <p>
+                                 <input type="search" placeholder="Location">
+                              </p>
+                              <p class="location-value">
+                                 <input type="text" value="50">
+                              </p>
+                              <div class="dropdown">
+                                 <button class="btn-dropdown dropdown-toggle" type="button" id="location" data-bs-toggle="dropdown" aria-haspopup="true">km</button>
+                                 <ul class="dropdown-menu" aria-labelledby="location">
+                                    <li>km</li>
+                                    <li>miles</li>
+                                 </ul>
+                              </div>
+                           </form>
+                        </div>
+                     </div> --}}
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     {{!-- <div class="single-job-sidebar sidebar-keywords">
+                        <h3>Keywords</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <select class="sidebar-category-select" name="states[]" multiple="multiple">
+                                 <option value="1">accounting</option>
+                                 <option value="2">finance</option>
+                                 <option value="3">automotive</option>
+                                 <option value="4">construction</option>
+                                 <option value="5">photoshop</option>
+                                 <option value="6">graphics</option>
+                                 <option value="7">After affects</option>
+                                 <option value="8">poster design</option>
+                              </select>
+                           </form>
+                        </div>
+                     </div> --}}
+                     <!-- Single Job Sidebar End -->
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-category ">
+                        <h3>Category</h3>
+                        <div class="job-sidebar-box">
+                           <form>
+                              <select class="sidebar-category-select-2 filterdata" id="category"  onchange="getDatas()"  name="states">
+                                          <option value=" ">any category</option>
+                                          <option value="Finance">Accounting / Finance</option>
+                                          <option value="Automotive">Automotive Jobs</option>
+                                          <option value="Construction">Construction / Facilities</option>
+                                          <option value="Design">Design,& Multimedia</option>
+                                          <option value="Art">Art</option>
+                                          <option value="Animation">Animation</option>
+                                          <option value="GraphicDesign">Graphic Design</option>
+                                          <option value="Illustration">Illustration</option>
+                                          <option value="Mechanic">Mechanic</option>
+                                          <option value="Photograhy">Photograhy</option>
+                                          <option value="Education">Education Training</option>
+                                          <option value="Healthcare">Healthcare</option>
+                                          <option value="Restaurant">Restaurant / Food Service</option>
+                                          <option value="Sales">Sales / Marketing</option>
+                                          <option value="Advertising">Display Advertising</option>
+                                          <option value="IT">IT</option>
+                                          <option value="Engineering">Engineering</option>
+                              </select>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+
+
+
+                      
+                     <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-type">
+                      <h3>job type</h3>
+                        <div class="job-sidebar-box">
+                           <ul>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin filterdata" name="Freelance" data-filter='catogory' value="Freelance"  onclick="getDatas()" type="checkbox" id="Freelance" />
+                                 <label for="Freelance"><span></span>Freelance</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin filterdata" name="FullTime" data-filter='catogory' value="FullTIme" onclick="getDatas()" type="checkbox" id="Full_Time" />
+                                 <label for="Full_Time"><span></span>Full Time</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin filterdata" name="Internship" data-filter='catogory' value="Internship" onclick="getDatas()" type="checkbox" id="Internship" />
+                                 <label for="Internship"><span></span>Internship</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin filterdata" name="PartTime" data-filter='catogory' value="PartTime"  onclick="getDatas()" type="checkbox" id="Part_Time" />
+                                 <label for="Part_Time"><span></span>Part Time</label>
+                              </li>
+                              <li class="checkbox">
+                                 <input class="checkbox-spin filterdata" name="Temporary" data-filter='catogory' value="Temporary" onclick="getDatas()" type="checkbox" id="Temporary" />
+                                 <label for="Temporary"><span></span>Temporary</label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End -->
+                      
+                     {{!-- <!-- Single Job Sidebar Start -->
+                     <div class="single-job-sidebar sidebar-salary">
+                        <h3>Filter by Salary</h3>
+                        <div class="job-sidebar-box">
+                           <p>
+                              <input type="text" id="amount"  readonly>
+                           </p>
+                           <div id="slider"></div>
+                        </div>
+                     </div>
+                     <!-- Single Job Sidebar End --> --}}
+                      
+                  </div>
+               </div>
+               <div class="col-md-10 col-lg-9 mx-auto">
+                  <div class="job-grid-right">
+                     <div class="browse-job-head-option">
+                        <div class="job-browse-search">
+
+
+                           <form>
+                              <input type="search" placeholder="Search Jobs Here..." id="searchField" onkeydown="getDatas()"  name="search">
+                              <button type="submit"><i class="fa fa-search"></i></button>
+                           </form>
+
+
+                        </div>
+                        <div class="job-browse-action">
+
+                           
+                           {{!-- <div class="email-alerts">
+                              <input type="checkbox" class="styled" id="b_1">
+                              <label class="styled" for="b_1">email alerts for this search</label>
+                           </div> --}}
+
+                           {{!-- <div class="dropdown">
+                              <button class="btn-dropdown dropdown-toggle" type="button" id="dropdowncur" data-bs-toggle="dropdown" aria-haspopup="true">Sort By</button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdowncur">
+                                 <li>Newest</li>
+                                 <li>Oldest</li>
+                                 <li>Random</li>
+                              </ul>
+                           </div> --}}
+
+
+                        </div>
+                     </div>
+                     <!-- end job head -->
+                                 <div id="displayprofileresult" style="display: ;" >
+
+
+
+
+
+                                    
+                               </div>
+
+
+                     
+
+                     <div class="job-sidebar-list-single">
+                         {{#each aplliedjob}}
+                        <div class="sidebar-list-single">
+                           <div class="top-company-list">
+                              <div class="company-list-logo">
+                                 <a href="#">
+                                 <img src="/employprofile/{{this.employer_id}}.png" alt="company list 1">
+                                 </a>
+                              </div>
+                              <div class="company-list-details">
+                                 <h3><a href="/jobInDetails?jobid={{this._id}}">{{this.jobTitle}}</a></h3>
+                                 <p class="company-state"><i class="fa fa-map-marker"></i> {{this.Location}}</p>
+
+                                 <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>{{this._id}}</p>
+                                 
+                                 <p class="varify"><i class="fa fa-check"></i>Salary Range : ${{this.minSalary}}-${{this.maxSalary}}</p>
+                                 <p class="rating-company">{{this.jobtype}}</p>
+                              </div>
+                              <div class="company-list-btn">
+                                 <a href="#" class="jobguru-btn">Applied</a>
+                              </div>
+                           </div>
+                        </div>
+
+                        {{/each}}
+
+
+                     <div id="displayprofile" style="display: block;">
+
+                        {{#each listedjob.listedjobs}}
+
+                      <div class="job-sidebar-list-single">
+                        <div class="sidebar-list-single">
+                           <div class="top-company-list">
+                              <div class="company-list-logo">
+                                 <a href="#">
+                                 <img src="/employprofile/{{this.employer_id}}.png" alt="company list 1">
+                                 </a>
+                              </div>
+                              <div class="company-list-details">
+                                 <h3><a href="/jobInDetails?jobid={{this._id}}">{{this.jobTitle}}</a></h3>
+                                 <p class="company-state"><i class="fa fa-map-marker"></i> {{this.Location}}</p>
+
+                                 <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>{{this._id}}</p>
+
+                                 <p class="varify"><i class="fa fa-check"></i>Salary Range : ${{this.minSalary}}-${{this.maxSalary}}</p>
+                                 <p class="rating-company">{{this.jobtype}}</p>
+                              </div>
+                              {{#if this.userapplied}}
+                              <div class="company-list-btn">
+                                 <a   class="jobguru-btn">Applied</a>
+                              </div>
+
+
+                              {{!-- apply now opetion --}}
+
+                              {{else}}
+                                  <div class="company-list-btn">
+                                 {{!-- <a href="/applyjob?jobid={{this._id}}" id="applyjob"   class="jobguru-btn">Apply now</a> --}}
+
+                                   <td><button class="jobguru-btn" id="applyjob" value="{{this._id}}" >Apply now</button></td>
+
+                              </div>
+
+                              {{/if}}
+                           </div>
+                        </div>
+                        {{/each}}
+                     </div>
+     
+
+
+
+
+                     </div>
+                     <!-- end job sidebar list -->
+                     <div class="pagination-box-row">
+                        {{!-- <p>Page 1 of 6</p> --}}
+                        <ul class="pagination">
+                           {{#if listedjob.prev.page}}
+                            <li><a href="/browsejobs?next={{listedjob.prev.page}}"><i class="fa fa-angle-double-left"></i></a></li>
+                            {{/if}}
+                           {{!-- <li class="active"><a href="#">1</a></li>
+                           <li><a href="#">2</a></li>
+                           <li><a href="#">3</a></li>
+                           <li>...</li>
+                           <li><a href="#">6</a></li> --}}
+                           {{#if listedjob.next.page}}
+                           <li><a href="/browsejobs?next={{listedjob.next.page}}"><i class="fa fa-angle-double-right"></i></a></li>
+                            {{/if}}
+                        </ul>
+                     </div>
+
+
+
+
+                     <!-- end pagination -->
+                  </div>
+               </div>
+
+            </div>
+            
+         </div>
+                     <div class="pagination-box-row" id="pagenate" style="display: none;">
+                        {{!-- <p>Page 1 of 6</p> --}}
+                        <ul class="pagination">
+  
+                            {{!-- <li><a href="/filterdata?next=1"><i class="fa fa-angle-double-left"></i></a></li> --}}
+                           <li value="1" id="prev"> <i class="fa fa-angle-double-left"   onclick="getP()"></i></li>
+   
+                           <li value="2" id="next"> <i class="fa fa-angle-double-right"   onclick="getD()"></i></li>
+            
+                        </ul>
+                     </div>
+                     
+
+      </section>
+      <!-- Top Job Area End -->
+
+
+
+<script>
+         
+
+
+
+         let defaultdata = document.getElementById('displayprofile')
+         let filterdata = document.getElementById('displayprofileresult')
+
+           {{!-- const searchField=document.querySelector("#searchField")
+                     searchField.addEventListener("keyup",(e)=>{
+                        const searchvalue=e.target.value;
+                        console.log(searchvalue.trim().length)
+                        if(searchvalue.trim().length>0){
+                           filterdata.innerText=''
+                           console.log(searchvalue);
+                           $.ajax({
+                                 url : "/searchprofile",
+                                 type: "GET",
+                                 data:{'search':searchvalue},
+                                 success:function(res){
+                                 console.log(res)
+                                 console.log(res.length);
+                                 if(res.length>0){
+                                    filterdata.style.display ='block'
+                                       defaultdata.style.display='none'   
+                                       
+                                       document.querySelector('#displayprofileresult').style.display="block"
+
+                                       res.forEach((item)=>{
+                  
+                                          filterdata.innerHTML +=
+                                          `
+                                          <div class="job-sidebar-list-single">
+                                             <div class="sidebar-list-single">
+                                                <div class="top-company-list">
+                                                   <div class="company-list-logo">
+                                                      <a href="#">
+                                                      <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                                      </a>
+                                                   </div>
+                                                   <div class="company-list-details">
+                                                      <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                                      <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                                      <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                                      <p class="varify"><i class="fa fa-check"></i>Fixed price : ${item.minSalary}-${item.maxSalary}</p>
+                                                      <p class="rating-company">${item.jobtype}</p>
+                                                   </div>
+                                                   <div class="company-list-btn">
+                                                      <a href="/applyjob?jobid=${item._id}"  class="jobguru-btn">bid now</a>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          `
+                                       })
+                                 }else if(res.length==0){
+
+                                    filterdata.style.display ='block'
+                                       defaultdata.style.display='none'  
+                                   
+                                 }else if(res==false){
+                                    location.reload()
+                                 }
+                              }  
+
+
+                           }); 
+                           
+                        }
+                        else{
+                
+                               filterdata.style.display ='none'
+                                       defaultdata.style.display='block'
+                        }
+                     }) --}}
+           
+
+
+
+         function getP(){
+                     var page = document.getElementById("prev").getAttribute('value')
+                     console.log(page)
+                     document.getElementById('pagenate').style.display='block'
+
+
+                              /*searched data */
+                  const searchField=document.querySelector("#searchField")
+               filterdata.innerText=''
+               /* search data */
+                        var search =$('input[name="search"]').keyup(function(){
+                        }).val();
+                        console.log(search)
+
+                  /*Dated posted*/
+                  var datePosted = $('input[type="radio"]:checked').val()
+                  /*category*/
+                  var cat = $("#category").val()
+                  /*job type */
+                  var data = $('input[type="checkbox"]:checked')
+                  var dataValue =[]
+                  for( let i=0; i<data.length; i++){
+                     dataValue.push(data[i].value)
+                  }
+
+                  /*here we are going to send the data to the server through ajax and we will set the data with our values*/
+                  $.ajax({
+                  type:"get",
+                  url:'/filterdata',
+                  data:{jobtype:dataValue,posted:datePosted,category:cat,searchdata:search,next:page},
+                  success:function(res){
+                     console.log('fffff')
+                     console.log(res)
+                     console.log(res.filterdat.length);
+                     if(res.next){
+                        document.getElementById("next").value = res.next.page
+                     }
+                     if(res.prev){
+                        document.getElementById("prev").value = res.prev.page
+                     }
+
+                     if(res.filterdat.length>0){
+                        filterdata.style.display ='block'
+                           defaultdata.style.display='none'   
+                           document.querySelector('#displayprofileresult').style.display="block"
+                           res.filterdat.forEach((item)=>{
+                              console.log('hello world')
+                              if(item.userapplied == true){
+                                 filterdata.innerHTML +=
+                                 `
+                                 <div class="job-sidebar-list-single">
+                                    <div class="sidebar-list-single">
+                                       <div class="top-company-list">
+                                          <div class="company-list-logo">
+                                             <a href="#">
+                                             <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                             </a>
+                                          </div>
+                                          <div class="company-list-details">
+                                             <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                             <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                             <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                             <p class="varify"><i class="fa fa-check"></i>Fixed price : ${item.minSalary}-${item.maxSalary}</p>
+                                             <p class="rating-company">${item.jobtype}</p>
+                                          </div>
+                                          <div class="company-list-btn">
+                                             <a  class="jobguru-btn">Applied</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    
+                                 `             
+                              }
+                              else
+                              {
+
+                                    filterdata.innerHTML +=
+                                 `
+                                 <div class="job-sidebar-list-single">
+                                    <div class="sidebar-list-single">
+                                       <div class="top-company-list">
+                                          <div class="company-list-logo">
+                                             <a href="#">
+                                             <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                             </a>
+                                          </div>
+                                          <div class="company-list-details">
+                                             <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                             <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                             <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                             <p class="varify"><i class="fa fa-check"></i>Fixed price : ${item.minSalary}-${item.maxSalary}</p>
+                                             <p class="rating-company">${item.jobtype}</p>
+                                          </div>
+                                          <div class="company-list-btn">
+
+                                             <td><button class="jobguru-btn" id="applyjob" value="${item._id}" >Apply now</button></td>
+
+                                             {{!-- <a href="/applyjob?jobid=${item._id}"  class="jobguru-btn">Apply now</a> --}}
+
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                 `
+         
+                              }
+
+                     timee()
+                           })
+                     }else if(res.length==0){
+                           filterdata.style.display ='block'
+                           defaultdata.style.display='none'
+                     }else if(res==false){
+                        {{!-- location.reload() --}}
+                     }
+                  }  
+                  
+               });
+         }
+
+
+
+
+
+
+
+
+
+
+
+         function getD(){
+                     var page = document.getElementById("next").getAttribute('value')
+                     console.log(page)
+                     document.getElementById('pagenate').style.display='block'
+
+
+                              /*searched data */
+                  const searchField=document.querySelector("#searchField")
+               filterdata.innerText=''
+               /* search data */
+                        var search =$('input[name="search"]').keyup(function(){
+                        }).val();
+                        console.log(search)
+
+                  /*Dated posted*/
+                  var datePosted = $('input[type="radio"]:checked').val()
+                  /*category*/
+                  var cat = $("#category").val()
+                  /*job type */
+                  var data = $('input[type="checkbox"]:checked')
+                  var dataValue =[]
+                  for( let i=0; i<data.length; i++){
+                     dataValue.push(data[i].value)
+                  }
+
+                  /*here we are going to send the data to the server through ajax and we will set the data with our values*/
+                  $.ajax({
+                  type:"get",
+                  url:'/filterdata',
+                  data:{jobtype:dataValue,posted:datePosted,category:cat,searchdata:search,next:page},
+                  success:function(res){
+                     console.log('fffff')
+                     console.log(res)
+                     console.log(res.filterdat.length);
+                     if(res.next){
+                        document.getElementById("next").value = res.next.page
+                     }
+                     if(res.prev){
+                        document.getElementById("prev").value = res.prev.page
+                     }
+
+                     if(res.filterdat.length>0){
+                        filterdata.style.display ='block'
+                           defaultdata.style.display='none'   
+                           document.querySelector('#displayprofileresult').style.display="block"
+                           res.filterdat.forEach((item)=>{
+                              console.log('hello world')
+                              if(item.userapplied == true){
+                                 filterdata.innerHTML +=
+                                 `
+                                 <div class="job-sidebar-list-single">
+                                    <div class="sidebar-list-single">
+                                       <div class="top-company-list">
+                                          <div class="company-list-logo">
+                                             <a href="#">
+                                             <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                             </a>
+                                          </div>
+                                          <div class="company-list-details">
+                                             <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                             <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                             <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                             <p class="varify"><i class="fa fa-check"></i>Fixed price : ${item.minSalary}-${item.maxSalary}</p>
+                                             <p class="rating-company">${item.jobtype}</p>
+                                          </div>
+                                          <div class="company-list-btn">
+                                             <a  class="jobguru-btn">Applied</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    
+                                 `
+                                    
+                              }
+                              else
+                              {
+
+                                    filterdata.innerHTML +=
+                                 `
+                                 <div class="job-sidebar-list-single">
+                                    <div class="sidebar-list-single">
+                                       <div class="top-company-list">
+                                          <div class="company-list-logo">
+                                             <a href="#">
+                                             <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                             </a>
+                                          </div>
+                                          <div class="company-list-details">
+                                             <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                             <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                             <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                             <p class="varify"><i class="fa fa-check"></i>Salary Range : ${item.minSalary}-${item.maxSalary}</p>
+                                             <p class="rating-company">${item.jobtype}</p>
+                                          </div>
+                                          <div class="company-list-btn">
+                                             
+                                             {{!-- <a href="/applyjob?jobid=${item._id}"  class="jobguru-btn">Apply nowqq</a> --}}
+                                              <td><button class="jobguru-btn" id="applyjob" value="${item._id}" >Apply now</button></td>
+                                             
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                 `
+         
+                              }
+
+                     timee()                     
+                           })
+                     }else if(res.length==0){
+                           filterdata.style.display ='block'
+                           defaultdata.style.display='none'
+                     }else if(res==false){
+                        {{!-- location.reload() --}}
+                     }
+                  }  
+                  
+               });
+         }
+
+    function getDatas (){  
+       /*page nation */
+            {{!-- var page = document.getElementById("next").getAttribute('value')
+            console.log(page) --}}
+
+             document.getElementById('pagenate').style.display='block'
+
+
+
+         /*searched data */
+         const searchField=document.querySelector("#searchField")
+       filterdata.innerText=''
+       /* search data */
+                var search =$('input[name="search"]').keyup(function(){
+                }).val();
+                console.log(search)
+
+          /*Dated posted*/
+          var datePosted = $('input[type="radio"]:checked').val()
+          /*category*/
+          var cat = $("#category").val()
+          /*job type */
+           var data = $('input[type="checkbox"]:checked')
+           var dataValue =[]
+           for( let i=0; i<data.length; i++){
+              dataValue.push(data[i].value)
+           }
+
+         /*here we are going to send the data to the server through ajax and we will set the data with our values*/
+          $.ajax({
+         type:"get",
+			url:'/filterdata',
+			data:{jobtype:dataValue,posted:datePosted,category:cat,searchdata:search},
+			success:function(res){
+            console.log('fffff')
+            console.log(res)
+				console.log(res.filterdat.length);
+            {{!-- if(res.next){
+                document.getElementById("next").getAttribute('value') = res.next..page
+            } --}}
+
+            if(res.filterdat.length>0){
+               filterdata.style.display ='block'
+                  defaultdata.style.display='none'   
+                  document.querySelector('#displayprofileresult').style.display="block"
+                  res.filterdat.forEach((item)=>{
+                     console.log('hello world')
+                     if(item.userapplied == true){
+                        filterdata.innerHTML +=
+                        `
+                        <div class="job-sidebar-list-single">
+                           <div class="sidebar-list-single">
+                              <div class="top-company-list">
+                                 <div class="company-list-logo">
+                                    <a href="#">
+                                    <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                    </a>
+                                 </div>
+                                 <div class="company-list-details">
+                                    <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                    <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                    <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                    <p class="varify"><i class="fa fa-check"></i>Salary Range : ${item.minSalary}-${item.maxSalary}</p>
+                                    <p class="rating-company">${item.jobtype}</p>
+                                 </div>
+                                 <div class="company-list-btn">
+                                    <a  class="jobguru-btn">Applied</a>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                        `
+                     }
+                     else
+                     {
+
+                           filterdata.innerHTML +=
+                        `
+                        <div class="job-sidebar-list-single">
+                           <div class="sidebar-list-single">
+                              <div class="top-company-list">
+                                 <div class="company-list-logo">
+                                    <a href="#">
+                                    <img src="/employprofile/${item.employer_id}.png" alt="company list 1">
+                                    </a>
+                                 </div>
+                                 <div class="company-list-details">
+                                    <h3><a href="/jobInDetails?jobid=${item._id}">${item.jobTitle}</a></h3>
+                                    <p class="company-state"><i class="fa fa-map-marker"></i> ${item.Location}</p>
+
+                                    <p class="open-icon dateGen"><i class="fa fa-clock-o"></i>${item._id}</p>
+
+                                    <p class="varify"><i class="fa fa-check"></i>Salary Range : ${item.minSalary}-${item.maxSalary}</p>
+                                    <p class="rating-company">${item.jobtype}</p>
+                                 </div>
+                                 <div class="company-list-btn">
+
+                                    <td><button class="jobguru-btn" id="applyjob" value="${item._id}" >Apply now</button></td>
+                                    {{!-- <a href="/applyjob?jobid=${item._id}"  class="jobguru-btn">Apply noww</a> --}}
+
+                                 </div>
+                              </div>
+                           </div>
+
+                        `
+  
+                     }
+
+             timee()
+
+            
+                  })
+            }else if(res.length==0){
+                  filterdata.style.display ='block'
+                  defaultdata.style.display='none'
+            }else if(res==false){
+               {{!-- location.reload() --}}
+            }
+			}  
+         
+		});
+
+   }
+
+
+
+
+    window.addEventListener('load', timee)
+    function timee() {
+        var dateGen = document.getElementsByClassName('dateGen')
+        for (var i = 0; i < dateGen.length; i++) {
+            timestamp = (dateGen[i].innerText).toString().substring(0, 8)
+            date = new Date(parseInt(timestamp, 16) * 1000)
+            Day = date.getDate();
+            Month = date.getMonth();
+            Hour = date.getHours();
+            Minute = date.getMinutes();
+            AMPM = 'AM'
+            if (Day.toString().length == 1) Day = "0" + Day;
+            if (Month.toString().length == 1) Month = "0" + Month;
+            if (Minute.toString().length == 1) Minute = "0" + Minute;
+            if (parseInt(Hour) > 12) {
+                Hour = Hour - 12;
+                AMPM = 'PM'
+            }
+            if (Hour.toString().length == 1) Hour = "0" + Hour;
+            dateGen[i].innerHTML = ` ${Day}/${Month}/${date.getFullYear()} - ${Hour}:${Minute} ${AMPM}`;
+        }
+    }
+
+</script>
+
+
+
+<script>
+
+   $(document).on('click', '#applyjob', function(e){
+   e.preventDefault();
+//your code goes here
+    $.ajax({type: "POST",
+        url: '/applyjob',
+        data: { jobid: $(this).val()},
+        success:function(result) {
+           console.log(result)
+               if(result==true){
+                  window.location.reload()
+                  console.log('hello')
+                  {{!-- window.location.href = `/employer/appliedcandidatetrue?jobid=${result.jobid}`; --}}
+           }else if(result == false){
+              window.location.href = `/login`
+           }else if(result.createresult==true){
+              window.location.href = `/createresume`
+           }
+           else{
+                 window.location.reload()
+           }
+          {{!-- alert('ok'); --}}
+        },
+        error:function(result) {
+        }
+    });
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
