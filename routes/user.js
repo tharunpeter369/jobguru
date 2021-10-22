@@ -43,7 +43,7 @@ router.get("/",async(req,res)=>{
     console.log(req.session.loggedinuser);
     //  res.render('user/index',{layout:'user/userlayout',logedinuser:req.session.loggedinuser})
     var jobcount =await userHelpers.findTotaljobsCount()
-    console.log('lllllllllllllllllllllllllldddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd');
+
     console.log(jobcount);
 
      res.render('user/index-2',{layout:'user/userlayout3',logedinuser:req.session.loggedinuser,jobcount})
@@ -451,7 +451,7 @@ router.post('/applyjob',(req,res)=>{
     // }
     // res.json(true)
     if(!req.session.loggedinuser){
-        console.log('ssssssssssssssssssssssssssssssssssssssssssssssss');
+
         res.json(false)
         // res.redirect('/login')
     }else{
@@ -462,11 +462,11 @@ router.post('/applyjob',(req,res)=>{
                 // res.redirect('/createresume')
                 // res.json(false)
             }else{
-                console.log('wwwwwwwwwwwwwwwwwwww');
+
                 // res.json(true)
                     // res.send('applying to job')
                     userHelpers.applyingjob(req.session.loggedinuser,req.body).then(()=>{
-                        console.log('qqqqqqqqqqqqqqqqqqq');
+ 
                         res.json(true)
                         // if(req.query.route == 'homesearch'){
                         //     res.redirect('/homesearch')
@@ -620,7 +620,7 @@ router.get('/googlesuccess',(req,res)=>{
  /* dont delete this shit */
 
 // router.post("/s3buck",  (req, res) => {
-//     console.log("ha its over")
+
 //     console.log(req.body);
 //     let image1 = req.body.file;
 //     const path1 = `./public/resumeProfile/001.jpg`; 
